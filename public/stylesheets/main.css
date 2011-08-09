@@ -1,0 +1,138 @@
+.select-hover{
+	background-color : #333;
+	color : white;
+}
+
+.suggest-box {
+	z-index : 100000000;
+	font-size : 13px;
+	font-family  : 'Arial';
+	border-width : 1px;
+	border-style : solid;
+	position    : absolute;
+	background-color : white;
+}
+
+.help-desc{
+	font-size : 13px;
+	white-space : pre;
+	padding-left : 25px;
+}
+.x-grid3-hd-columnPrimary {
+	background: transparent 
+                url(../../../images/icons/primary_key.png) 
+                no-repeat 3px 5px ! important;
+                padding-left:25px;
+}
+ 
+ .dbms-view-over{
+	font-size:13px;
+	background-color : #d7d7d7;
+	clear : both;
+ }
+ 
+ .thumb-wrap{
+	padding:2px;
+	border-bottom:none;
+	font-size:13px;
+	width : 5000px;
+ }
+ 
+ .thumb{
+	text-align:center;
+	width : 400px;
+ }
+ 
+ .thumb-header{
+	text-align:center;
+	padding:2px;
+ }
+ 
+
+.sort-desc {
+    background-image: url("../../../images/icons/sort_desc.gif") !important;
+    background-position: 4px 7px !important;
+}
+
+.sort-asc {
+    background-image: url("../../../images/icons/sort_asc.gif") !important;
+    background-position: 4px 7px !important;
+}
+
+.dbms-exec-sql-logo{
+	margin-left:2px;
+	margin-bottom:15px;
+	height : 26px;
+}
+
+.x-tree-node-icon.x-tree-node-inline-icon.dbms-webdatabase {
+	height : 0px;
+	margin-top: -3px;
+	width : 0px;
+}
+
+.dbms-database-title{
+	font-size:13px;
+	margin-left:3px
+}
+
+.dbms-database-title-wrap{
+	font-size:13px;
+	margin-left:30px;
+	margin-top:-15px;
+}
+
+.x-tree-node .dbms-database-size{
+	display: block;
+	margin-left: 145px;
+	font-size:13px;
+	margin-top: -36px;
+	color : grey;
+}
+
+div,
+div *{
+	-o-tab-size: 4; /* размер табуляции — 4 (для Оперы 10.60+) */
+    -moz-tab-size: 4; /* размер табуляции — 4 (для FireFox 4+) */
+    -webkit-tab-size: 4; /* для будущих версий Safari и Chrome */
+     tab-size: 4; /* размер табуляции — 4, на будущее */
+}
+
+/**FILE UPLOAD FIELD**/
+/*!
+ * Ext JS Library 3.3.0
+ * Copyright(c) 2006-2010 Ext JS, Inc.
+ * licensing@extjs.com
+ * http://www.extjs.com/license
+ */
+/*
+ * FileUploadField component styles
+ */
+.x-form-file-wrap {
+    position: relative;
+    height: 22px;
+}
+.x-form-file-wrap .x-form-file {
+	position: absolute;
+	right: 0;
+	-moz-opacity: 0;
+	filter:alpha(opacity: 0);
+	opacity: 0;
+	z-index: 2;
+    height: 22px;
+}
+.x-form-file-wrap .x-form-file-btn {
+	position: absolute;
+	right: 0;
+	z-index: 1;
+}
+.x-form-file-wrap .x-form-file-text {
+    position: absolute;
+    left: 0;
+    z-index: 3;
+    color: #777;
+}
+
+.sql-autocomplete-body p {
+	height : 15px;
+}

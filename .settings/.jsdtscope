@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="WebContent"/>
+	<classpathentry kind="lib" path="/var/www/ror_admin_site/public/ext-3.2.1/adapter/ext/ext-base-debug-w-comments.js"/>
+	<classpathentry kind="lib" path="/var/www/ror_admin_site/public/ext-3.2.1/ext-all-debug-w-comments (копія).js"/>
+	<classpathentry kind="con" path="org.eclipse.wst.jsdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="con" path="org.eclipse.wst.jsdt.launching.WebProject">
+		<attributes>
+			<attribute name="hide" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="con" path="org.eclipse.wst.jsdt.launching.baseBrowserLibrary"/>
+	<classpathentry kind="con" path="org.eclipse.wst.jsdt.USER_LIBRARY/ext"/>
+	<classpathentry kind="output" path=""/>
+</classpath>

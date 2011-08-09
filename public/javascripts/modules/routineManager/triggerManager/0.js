@@ -1,0 +1,1 @@
+Ext.ns('Dbms.RoutineManagement.TriggerManager');

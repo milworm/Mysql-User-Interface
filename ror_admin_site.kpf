@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Komodo Project File - DO NOT EDIT -->
+<project id="28e007de-51e4-4905-afc2-a5b194442e3c" kpf_version="4" name="ror_admin_site.kpf">
+<file id="b90fd63c-d48e-41e1-bf0c-19f6ae082df7" idref="28e007de-51e4-4905-afc2-a5b194442e3c" name="strings.py" url="file:///var/www/python/strings.py">
+</file>
+<preference-set idref="28e007de-51e4-4905-afc2-a5b194442e3c">
+  <boolean id="import_live">1</boolean>
+</preference-set>
+</project>

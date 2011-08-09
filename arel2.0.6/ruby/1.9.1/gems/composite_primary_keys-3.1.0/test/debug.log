@@ -1,0 +1,589 @@
+# Logfile created on Sat Nov 20 00:07:06 -0700 2010 by logger.rb/22285
+  [1m[36mSQL (0.0ms)[0m  [1mSHOW client_min_messages[0m
+  [1m[35mSQL (0.0ms)[0m  SET client_min_messages TO 'panic'
+  [1m[36mSQL (0.0ms)[0m  [1mSET standard_conforming_strings = on[0m
+  [1m[35mSQL (1.0ms)[0m  SET client_min_messages TO 'notice'
+  [1m[36mSQL (0.0ms)[0m  [1mSHOW TIME ZONE[0m
+  [1m[36mSQL (0.0ms)[0m  [1mSHOW client_min_messages[0m
+  [1m[35mSQL (0.0ms)[0m  SET client_min_messages TO 'panic'
+  [1m[36mSQL (0.0ms)[0m  [1mSET standard_conforming_strings = on[0m
+  [1m[35mSQL (0.0ms)[0m  SET client_min_messages TO 'notice'
+  [1m[36mSQL (0.0ms)[0m  [1mSHOW TIME ZONE[0m
+PGError: ERROR:  operator does not exist: character varying = integer
+LINE 1: ...ments".person_type = 'User') AND ("comments".person_id = 1))
+                                                                  ^
+HINT:  No operator matches the given name and argument type(s). You might need to add explicit type casts.
+: SELECT     "hacks".* FROM       "hacks"  INNER JOIN "comments" ON ("hacks"."name" = "comments"."hack_id") WHERE     (("comments".person_type = 'User') AND ("comments".person_id = 1))
+  [1m[36mSQL (1.0ms)[0m  [1mSHOW client_min_messages[0m
+  [1m[35mSQL (1.0ms)[0m  SET client_min_messages TO 'panic'
+  [1m[36mSQL (0.0ms)[0m  [1mSET standard_conforming_strings = on[0m
+  [1m[35mSQL (0.0ms)[0m  SET client_min_messages TO 'notice'
+  [1m[36mSQL (1.0ms)[0m  [1mSHOW TIME ZONE[0m
+PGError: ERROR:  operator does not exist: character varying = integer
+LINE 1: ...ments".person_type = 'User') AND ("comments".person_id = 1))
+                                                                  ^
+HINT:  No operator matches the given name and argument type(s). You might need to add explicit type casts.
+: SELECT     "hacks".* FROM       "hacks"  INNER JOIN "comments" ON ("hacks"."name" = "comments"."hack_id") WHERE     (("comments".person_type = 'User') AND ("comments".person_id = 1))
+  [1m[36mSQL (1.0ms)[0m  [1mSHOW client_min_messages[0m
+  [1m[35mSQL (1.0ms)[0m  SET client_min_messages TO 'panic'
+  [1m[36mSQL (0.0ms)[0m  [1mSET standard_conforming_strings = on[0m
+  [1m[35mSQL (1.0ms)[0m  SET client_min_messages TO 'notice'
+  [1m[36mSQL (0.0ms)[0m  [1mSHOW TIME ZONE[0m
+PGError: ERROR:  column "rooms.dorm_id" must appear in the GROUP BY clause or be used in an aggregate function
+LINE 1: SELECT "rooms".*, COUNT(*) FROM "rooms" INNER JOIN "room_ass...
+               ^
+: SELECT "rooms".*, COUNT(*) FROM "rooms" INNER JOIN "room_assignments" ON ("rooms"."dorm_id" = "room_assignments"."dorm_id" AND "rooms"."room_id" = "room_assignments"."room_id") WHERE (("room_assignments".student_id = 1))
+PGError: ERROR:  operator does not exist: character varying = integer
+LINE 1: ...ments".person_type = 'User') AND ("comments".person_id = 1))
+                                                                  ^
+HINT:  No operator matches the given name and argument type(s). You might need to add explicit type casts.
+: SELECT "hacks".* FROM "hacks" INNER JOIN "comments" ON ("hacks"."name" = "comments"."hack_id") WHERE (("comments".person_type = 'User') AND ("comments".person_id = 1))
+  [1m[36mSQL (0.0ms)[0m  [1mSHOW client_min_messages[0m
+  [1m[35mSQL (0.0ms)[0m  SET client_min_messages TO 'panic'
+  [1m[36mSQL (1.0ms)[0m  [1mSET standard_conforming_strings = on[0m
+  [1m[35mSQL (0.0ms)[0m  SET client_min_messages TO 'notice'
+  [1m[36mSQL (0.0ms)[0m  [1mSHOW TIME ZONE[0m
+PGError: ERROR:  column "rooms.dorm_id" must appear in the GROUP BY clause or be used in an aggregate function
+LINE 1: SELECT "rooms".*, COUNT(*) FROM "rooms" INNER JOIN "room_ass...
+               ^
+: SELECT "rooms".*, COUNT(*) FROM "rooms" INNER JOIN "room_assignments" ON ("rooms"."dorm_id" = "room_assignments"."dorm_id" AND "rooms"."room_id" = "room_assignments"."room_id") WHERE (("room_assignments".student_id = 1))
+  [1m[36mSQL (0.0ms)[0m  [1mSHOW client_min_messages[0m
+  [1m[35mSQL (0.0ms)[0m  SET client_min_messages TO 'panic'
+  [1m[36mSQL (0.0ms)[0m  [1mSET standard_conforming_strings = on[0m
+  [1m[35mSQL (0.0ms)[0m  SET client_min_messages TO 'notice'
+  [1m[36mSQL (0.0ms)[0m  [1mSHOW TIME ZONE[0m
+PGError: ERROR:  column "rooms.dorm_id" must appear in the GROUP BY clause or be used in an aggregate function
+LINE 1: SELECT "rooms".*, COUNT(*) FROM "rooms" INNER JOIN "room_ass...
+               ^
+: SELECT "rooms".*, COUNT(*) FROM "rooms" INNER JOIN "room_assignments" ON ("rooms"."dorm_id" = "room_assignments"."dorm_id" AND "rooms"."room_id" = "room_assignments"."room_id") WHERE (("room_assignments".student_id = 1))
+  [1m[36mSQL (1.0ms)[0m  [1mSHOW client_min_messages[0m
+  [1m[35mSQL (1.0ms)[0m  SET client_min_messages TO 'panic'
+  [1m[36mSQL (0.0ms)[0m  [1mSET standard_conforming_strings = on[0m
+  [1m[35mSQL (0.0ms)[0m  SET client_min_messages TO 'notice'
+  [1m[36mSQL (1.0ms)[0m  [1mSHOW TIME ZONE[0m
+PGError: ERROR:  column "rooms.dorm_id" must appear in the GROUP BY clause or be used in an aggregate function
+LINE 1: SELECT "rooms".*, COUNT(*) FROM "rooms" INNER JOIN "room_ass...
+               ^
+: SELECT "rooms".*, COUNT(*) FROM "rooms" INNER JOIN "room_assignments" ON ("rooms"."dorm_id" = "room_assignments"."dorm_id" AND "rooms"."room_id" = "room_assignments"."room_id") WHERE (("room_assignments".student_id = 1))
+  [1m[36mSQL (0.0ms)[0m  [1mSHOW client_min_messages[0m
+  [1m[35mSQL (0.0ms)[0m  SET client_min_messages TO 'panic'
+  [1m[36mSQL (0.0ms)[0m  [1mSET standard_conforming_strings = on[0m
+  [1m[35mSQL (0.0ms)[0m  SET client_min_messages TO 'notice'
+  [1m[36mSQL (0.0ms)[0m  [1mSHOW TIME ZONE[0m
+PGError: ERROR:  column "rooms.dorm_id" must appear in the GROUP BY clause or be used in an aggregate function
+LINE 1: SELECT "rooms".*, COUNT(*) FROM "rooms" INNER JOIN "room_ass...
+               ^
+: SELECT "rooms".*, COUNT(*) FROM "rooms" INNER JOIN "room_assignments" ON ("rooms"."dorm_id" = "room_assignments"."dorm_id" AND "rooms"."room_id" = "room_assignments"."room_id") WHERE (("room_assignments".student_id = 1))
+  [1m[36mSQL (0.0ms)[0m  [1mSHOW client_min_messages[0m
+  [1m[35mSQL (0.0ms)[0m  SET client_min_messages TO 'panic'
+  [1m[36mSQL (1.0ms)[0m  [1mSET standard_conforming_strings = on[0m
+  [1m[35mSQL (0.0ms)[0m  SET client_min_messages TO 'notice'
+  [1m[36mSQL (0.0ms)[0m  [1mSHOW TIME ZONE[0m
+PGError: ERROR:  column "rooms.dorm_id" must appear in the GROUP BY clause or be used in an aggregate function
+LINE 1: SELECT "rooms".*, COUNT(*) FROM "rooms" INNER JOIN "room_ass...
+               ^
+: SELECT "rooms".*, COUNT(*) FROM "rooms" INNER JOIN "room_assignments" ON ("rooms"."dorm_id" = "room_assignments"."dorm_id" AND "rooms"."room_id" = "room_assignments"."room_id") WHERE (("room_assignments".student_id = 1))
+  [1m[36mSQL (0.0ms)[0m  [1mSHOW client_min_messages[0m
+  [1m[35mSQL (0.0ms)[0m  SET client_min_messages TO 'panic'
+  [1m[36mSQL (0.0ms)[0m  [1mSET standard_conforming_strings = on[0m
+  [1m[35mSQL (0.0ms)[0m  SET client_min_messages TO 'notice'
+  [1m[36mSQL (1.0ms)[0m  [1mSHOW TIME ZONE[0m
+PGError: ERROR:  column "rooms.dorm_id" must appear in the GROUP BY clause or be used in an aggregate function
+LINE 1: SELECT "rooms".*, COUNT(*) FROM "rooms" INNER JOIN "room_ass...
+               ^
+: SELECT "rooms".*, COUNT(*) FROM "rooms" INNER JOIN "room_assignments" ON ("rooms"."dorm_id" = "room_assignments"."dorm_id" AND "rooms"."room_id" = "room_assignments"."room_id") WHERE (("room_assignments".student_id = 1))
+  [1m[36mSQL (1.0ms)[0m  [1mSHOW client_min_messages[0m
+  [1m[35mSQL (0.0ms)[0m  SET client_min_messages TO 'panic'
+  [1m[36mSQL (0.0ms)[0m  [1mSET standard_conforming_strings = on[0m
+  [1m[35mSQL (1.0ms)[0m  SET client_min_messages TO 'notice'
+  [1m[36mSQL (0.0ms)[0m  [1mSHOW TIME ZONE[0m
+PGError: ERROR:  column "rooms.dorm_id" must appear in the GROUP BY clause or be used in an aggregate function
+LINE 1: SELECT "rooms".*, COUNT(*) FROM "rooms" INNER JOIN "room_ass...
+               ^
+: SELECT "rooms".*, COUNT(*) FROM "rooms" INNER JOIN "room_assignments" ON ("rooms"."dorm_id" = "room_assignments"."dorm_id" AND "rooms"."room_id" = "room_assignments"."room_id") WHERE (("room_assignments".student_id = 1))
+  [1m[36mSQL (0.0ms)[0m  [1mSHOW client_min_messages[0m
+  [1m[35mSQL (0.0ms)[0m  SET client_min_messages TO 'panic'
+  [1m[36mSQL (0.0ms)[0m  [1mSET standard_conforming_strings = on[0m
+  [1m[35mSQL (0.0ms)[0m  SET client_min_messages TO 'notice'
+  [1m[36mSQL (0.0ms)[0m  [1mSHOW TIME ZONE[0m
+PGError: ERROR:  column "rooms.dorm_id" must appear in the GROUP BY clause or be used in an aggregate function
+LINE 1: SELECT "rooms".*, COUNT(*) FROM "rooms" INNER JOIN "room_ass...
+               ^
+: SELECT "rooms".*, COUNT(*) FROM "rooms" INNER JOIN "room_assignments" ON ("rooms"."dorm_id" = "room_assignments"."dorm_id" AND "rooms"."room_id" = "room_assignments"."room_id") WHERE (("room_assignments".student_id = 1))
+  [1m[36mSQL (0.0ms)[0m  [1mSHOW client_min_messages[0m
+  [1m[35mSQL (0.0ms)[0m  SET client_min_messages TO 'panic'
+  [1m[36mSQL (0.0ms)[0m  [1mSET standard_conforming_strings = on[0m
+  [1m[35mSQL (0.0ms)[0m  SET client_min_messages TO 'notice'
+  [1m[36mSQL (0.0ms)[0m  [1mSHOW TIME ZONE[0m
+  [1m[36mSQL (1.0ms)[0m  [1mSHOW client_min_messages[0m
+  [1m[35mSQL (0.0ms)[0m  SET client_min_messages TO 'panic'
+  [1m[36mSQL (0.0ms)[0m  [1mSET standard_conforming_strings = on[0m
+  [1m[35mSQL (1.0ms)[0m  SET client_min_messages TO 'notice'
+  [1m[36mSQL (0.0ms)[0m  [1mSHOW TIME ZONE[0m
+  [1m[36mSQL (0.0ms)[0m  [1mSHOW client_min_messages[0m
+  [1m[35mSQL (0.0ms)[0m  SET client_min_messages TO 'panic'
+  [1m[36mSQL (0.0ms)[0m  [1mSET standard_conforming_strings = on[0m
+  [1m[35mSQL (1.0ms)[0m  SET client_min_messages TO 'notice'
+  [1m[36mSQL (0.0ms)[0m  [1mSHOW TIME ZONE[0m
+  [1m[36mSQL (1.0ms)[0m  [1mSHOW client_min_messages[0m
+  [1m[35mSQL (0.0ms)[0m  SET client_min_messages TO 'panic'
+  [1m[36mSQL (0.0ms)[0m  [1mSET standard_conforming_strings = on[0m
+  [1m[35mSQL (0.0ms)[0m  SET client_min_messages TO 'notice'
+  [1m[36mSQL (0.0ms)[0m  [1mSHOW TIME ZONE[0m
+  [1m[36mSQL (1.0ms)[0m  [1mSHOW client_min_messages[0m
+  [1m[35mSQL (1.0ms)[0m  SET client_min_messages TO 'panic'
+  [1m[36mSQL (0.0ms)[0m  [1mSET standard_conforming_strings = on[0m
+  [1m[35mSQL (0.0ms)[0m  SET client_min_messages TO 'notice'
+  [1m[36mSQL (1.0ms)[0m  [1mSHOW TIME ZONE[0m
+  [1m[36mSQL (1.0ms)[0m  [1mSHOW client_min_messages[0m
+  [1m[35mSQL (0.0ms)[0m  SET client_min_messages TO 'panic'
+  [1m[36mSQL (0.0ms)[0m  [1mSET standard_conforming_strings = on[0m
+  [1m[35mSQL (1.0ms)[0m  SET client_min_messages TO 'notice'
+  [1m[36mSQL (0.0ms)[0m  [1mSHOW TIME ZONE[0m
+  [1m[36mSQL (0.0ms)[0m  [1mSHOW client_min_messages[0m
+  [1m[35mSQL (0.0ms)[0m  SET client_min_messages TO 'panic'
+  [1m[36mSQL (0.0ms)[0m  [1mSET standard_conforming_strings = on[0m
+  [1m[35mSQL (0.0ms)[0m  SET client_min_messages TO 'notice'
+  [1m[36mSQL (0.0ms)[0m  [1mSHOW TIME ZONE[0m
+  [1m[36mSQL (0.0ms)[0m  [1mSHOW client_min_messages[0m
+  [1m[35mSQL (0.0ms)[0m  SET client_min_messages TO 'panic'
+  [1m[36mSQL (0.0ms)[0m  [1mSET standard_conforming_strings = on[0m
+  [1m[35mSQL (0.0ms)[0m  SET client_min_messages TO 'notice'
+  [1m[36mSQL (0.0ms)[0m  [1mSHOW TIME ZONE[0m
+  [1m[36mSQL (1.0ms)[0m  [1mSHOW client_min_messages[0m
+  [1m[35mSQL (0.0ms)[0m  SET client_min_messages TO 'panic'
+  [1m[36mSQL (1.0ms)[0m  [1mSET standard_conforming_strings = on[0m
+  [1m[35mSQL (1.0ms)[0m  SET client_min_messages TO 'notice'
+  [1m[36mSQL (1.0ms)[0m  [1mSHOW TIME ZONE[0m
+  [1m[36mSQL (1.0ms)[0m  [1mSHOW client_min_messages[0m
+  [1m[35mSQL (0.0ms)[0m  SET client_min_messages TO 'panic'
+  [1m[36mSQL (0.0ms)[0m  [1mSET standard_conforming_strings = on[0m
+  [1m[35mSQL (0.0ms)[0m  SET client_min_messages TO 'notice'
+  [1m[36mSQL (0.0ms)[0m  [1mSHOW TIME ZONE[0m
+  [1m[36mSQL (0.0ms)[0m  [1mSHOW client_min_messages[0m
+  [1m[35mSQL (0.0ms)[0m  SET client_min_messages TO 'panic'
+  [1m[36mSQL (0.0ms)[0m  [1mSET standard_conforming_strings = on[0m
+  [1m[35mSQL (0.0ms)[0m  SET client_min_messages TO 'notice'
+  [1m[36mSQL (0.0ms)[0m  [1mSHOW TIME ZONE[0m
+PGError: ERROR:  schema "(SELECT DISTINCT "tariffs"" does not exist
+LINE 1: SELECT COUNT(*) FROM "(SELECT DISTINCT ""tariffs"""."tariff_...
+                             ^
+: SELECT COUNT(*) FROM "(SELECT DISTINCT ""tariffs"""."tariff_id"
+  [1m[36mSQL (1.0ms)[0m  [1mSHOW client_min_messages[0m
+  [1m[35mSQL (0.0ms)[0m  SET client_min_messages TO 'panic'
+  [1m[36mSQL (1.0ms)[0m  [1mSET standard_conforming_strings = on[0m
+  [1m[35mSQL (1.0ms)[0m  SET client_min_messages TO 'notice'
+  [1m[36mSQL (0.0ms)[0m  [1mSHOW TIME ZONE[0m
+PGError: ERROR:  schema "(SELECT DISTINCT "tariffs"" does not exist
+LINE 1: SELECT COUNT(*) FROM "(SELECT DISTINCT ""tariffs"""."tariff_...
+                             ^
+: SELECT COUNT(*) FROM "(SELECT DISTINCT ""tariffs"""."tariff_id"
+  [1m[36mSQL (0.0ms)[0m  [1mSHOW client_min_messages[0m
+  [1m[35mSQL (0.0ms)[0m  SET client_min_messages TO 'panic'
+  [1m[36mSQL (0.0ms)[0m  [1mSET standard_conforming_strings = on[0m
+  [1m[35mSQL (0.0ms)[0m  SET client_min_messages TO 'notice'
+  [1m[36mSQL (1.0ms)[0m  [1mSHOW TIME ZONE[0m
+PGError: ERROR:  schema "(SELECT DISTINCT "tariffs"" does not exist
+LINE 1: SELECT COUNT(*) FROM "(SELECT DISTINCT ""tariffs"""."tariff_...
+                             ^
+: SELECT COUNT(*) FROM "(SELECT DISTINCT ""tariffs"""."tariff_id"
+  [1m[36mSQL (0.0ms)[0m  [1mSHOW client_min_messages[0m
+  [1m[35mSQL (0.0ms)[0m  SET client_min_messages TO 'panic'
+  [1m[36mSQL (0.0ms)[0m  [1mSET standard_conforming_strings = on[0m
+  [1m[35mSQL (0.0ms)[0m  SET client_min_messages TO 'notice'
+  [1m[36mSQL (0.0ms)[0m  [1mSHOW TIME ZONE[0m
+  [1m[36mSQL (0.0ms)[0m  [1mSHOW client_min_messages[0m
+  [1m[35mSQL (0.0ms)[0m  SET client_min_messages TO 'panic'
+  [1m[36mSQL (0.0ms)[0m  [1mSET standard_conforming_strings = on[0m
+  [1m[35mSQL (1.0ms)[0m  SET client_min_messages TO 'notice'
+  [1m[36mSQL (0.0ms)[0m  [1mSHOW TIME ZONE[0m
+  [1m[36mSQL (0.0ms)[0m  [1mSHOW client_min_messages[0m
+  [1m[35mSQL (0.0ms)[0m  SET client_min_messages TO 'panic'
+  [1m[36mSQL (0.0ms)[0m  [1mSET standard_conforming_strings = on[0m
+  [1m[35mSQL (0.0ms)[0m  SET client_min_messages TO 'notice'
+  [1m[36mSQL (0.0ms)[0m  [1mSHOW TIME ZONE[0m
+TypeError: wrong argument type Arel::SelectManager (expected String): #<Arel::SelectManager:0x59f0df0>
+  [1m[36mSQL (1.0ms)[0m  [1mSHOW client_min_messages[0m
+  [1m[35mSQL (1.0ms)[0m  SET client_min_messages TO 'panic'
+  [1m[36mSQL (0.0ms)[0m  [1mSET standard_conforming_strings = on[0m
+  [1m[35mSQL (0.0ms)[0m  SET client_min_messages TO 'notice'
+  [1m[36mSQL (1.0ms)[0m  [1mSHOW TIME ZONE[0m
+  [1m[36mSQL (0.0ms)[0m  [1mSHOW client_min_messages[0m
+  [1m[35mSQL (0.0ms)[0m  SET client_min_messages TO 'panic'
+  [1m[36mSQL (0.0ms)[0m  [1mSET standard_conforming_strings = on[0m
+  [1m[35mSQL (0.0ms)[0m  SET client_min_messages TO 'notice'
+  [1m[36mSQL (1.0ms)[0m  [1mSHOW TIME ZONE[0m
+  [1m[36mSQL (0.0ms)[0m  [1mSHOW client_min_messages[0m
+  [1m[35mSQL (0.0ms)[0m  SET client_min_messages TO 'panic'
+  [1m[36mSQL (1.0ms)[0m  [1mSET standard_conforming_strings = on[0m
+  [1m[35mSQL (0.0ms)[0m  SET client_min_messages TO 'notice'
+  [1m[36mSQL (0.0ms)[0m  [1mSHOW TIME ZONE[0m
+  [1m[36mSQL (1.0ms)[0m  [1mSHOW client_min_messages[0m
+  [1m[35mSQL (0.0ms)[0m  SET client_min_messages TO 'panic'
+  [1m[36mSQL (1.0ms)[0m  [1mSET standard_conforming_strings = on[0m
+  [1m[35mSQL (0.0ms)[0m  SET client_min_messages TO 'notice'
+  [1m[36mSQL (0.0ms)[0m  [1mSHOW TIME ZONE[0m
+PGError: ERROR:  column "i" does not exist
+LINE 1: SELECT COUNT(DISTINCT i) FROM "products" LEFT OUTER JOIN "pr...
+                              ^
+: SELECT COUNT(DISTINCT i) FROM "products" LEFT OUTER JOIN "product_tariffs" ON "product_tariffs"."product_id" = "products"."id"
+  [1m[36mSQL (1.0ms)[0m  [1mSHOW client_min_messages[0m
+  [1m[35mSQL (1.0ms)[0m  SET client_min_messages TO 'panic'
+  [1m[36mSQL (0.0ms)[0m  [1mSET standard_conforming_strings = on[0m
+  [1m[35mSQL (0.0ms)[0m  SET client_min_messages TO 'notice'
+  [1m[36mSQL (0.0ms)[0m  [1mSHOW TIME ZONE[0m
+  [1m[36mSQL (1.0ms)[0m  [1mSHOW client_min_messages[0m
+  [1m[35mSQL (1.0ms)[0m  SET client_min_messages TO 'panic'
+  [1m[36mSQL (0.0ms)[0m  [1mSET standard_conforming_strings = on[0m
+  [1m[35mSQL (0.0ms)[0m  SET client_min_messages TO 'notice'
+  [1m[36mSQL (0.0ms)[0m  [1mSHOW TIME ZONE[0m
+  [1m[36mSQL (0.0ms)[0m  [1mSHOW client_min_messages[0m
+  [1m[35mSQL (0.0ms)[0m  SET client_min_messages TO 'panic'
+  [1m[36mSQL (0.0ms)[0m  [1mSET standard_conforming_strings = on[0m
+  [1m[35mSQL (0.0ms)[0m  SET client_min_messages TO 'notice'
+  [1m[36mSQL (0.0ms)[0m  [1mSHOW TIME ZONE[0m
+  [1m[36mSQL (0.0ms)[0m  [1mSHOW client_min_messages[0m
+  [1m[35mSQL (0.0ms)[0m  SET client_min_messages TO 'panic'
+  [1m[36mSQL (0.0ms)[0m  [1mSET standard_conforming_strings = on[0m
+  [1m[35mSQL (0.0ms)[0m  SET client_min_messages TO 'notice'
+  [1m[36mSQL (0.0ms)[0m  [1mSHOW TIME ZONE[0m
+PGError: ERROR:  column "tariff_idstart_date" does not exist
+LINE 1: SELECT COUNT(DISTINCT tariff_idstart_date) FROM "tariffs" LE...
+                              ^
+: SELECT COUNT(DISTINCT tariff_idstart_date) FROM "tariffs" LEFT OUTER JOIN "product_tariffs" ON "product_tariffs"."tariff_id" = "tariffs"."tariff_id" AND "product_tariffs"."tariff_start_date" = "tariffs"."start_date"
+  [1m[36mSQL (0.0ms)[0m  [1mSHOW client_min_messages[0m
+  [1m[35mSQL (0.0ms)[0m  SET client_min_messages TO 'panic'
+  [1m[36mSQL (0.0ms)[0m  [1mSET standard_conforming_strings = on[0m
+  [1m[35mSQL (0.0ms)[0m  SET client_min_messages TO 'notice'
+  [1m[36mSQL (0.0ms)[0m  [1mSHOW TIME ZONE[0m
+PGError: ERROR:  column "tariff_idstart_date" does not exist
+LINE 1: SELECT COUNT(DISTINCT tariff_idstart_date) FROM "tariffs" LE...
+                              ^
+: SELECT COUNT(DISTINCT tariff_idstart_date) FROM "tariffs" LEFT OUTER JOIN "product_tariffs" ON "product_tariffs"."tariff_id" = "tariffs"."tariff_id" AND "product_tariffs"."tariff_start_date" = "tariffs"."start_date"
+PGError: ERROR:  operator does not exist: character varying = integer
+LINE 1: ...ments".person_type = 'User') AND ("comments".person_id = 1))
+                                                                  ^
+HINT:  No operator matches the given name and argument type(s). You might need to add explicit type casts.
+: SELECT "hacks".* FROM "hacks" INNER JOIN "comments" ON ("hacks"."name" = "comments"."hack_id") WHERE (("comments".person_type = 'User') AND ("comments".person_id = 1))
+  [1m[36mSQL (0.0ms)[0m  [1mSHOW client_min_messages[0m
+  [1m[35mSQL (0.0ms)[0m  SET client_min_messages TO 'panic'
+  [1m[36mSQL (0.0ms)[0m  [1mSET standard_conforming_strings = on[0m
+  [1m[35mSQL (0.0ms)[0m  SET client_min_messages TO 'notice'
+  [1m[36mSQL (0.0ms)[0m  [1mSHOW TIME ZONE[0m
+  [1m[36mSQL (0.0ms)[0m  [1mSHOW client_min_messages[0m
+  [1m[35mSQL (1.0ms)[0m  SET client_min_messages TO 'panic'
+  [1m[36mSQL (0.0ms)[0m  [1mSET standard_conforming_strings = on[0m
+  [1m[35mSQL (0.0ms)[0m  SET client_min_messages TO 'notice'
+  [1m[36mSQL (1.0ms)[0m  [1mSHOW TIME ZONE[0m
+  [1m[36mSQL (0.0ms)[0m  [1mSHOW client_min_messages[0m
+  [1m[35mSQL (0.0ms)[0m  SET client_min_messages TO 'panic'
+  [1m[36mSQL (0.0ms)[0m  [1mSET standard_conforming_strings = on[0m
+  [1m[35mSQL (0.0ms)[0m  SET client_min_messages TO 'notice'
+  [1m[36mSQL (0.0ms)[0m  [1mSHOW TIME ZONE[0m
+  [1m[36mSQL (1.0ms)[0m  [1mSHOW client_min_messages[0m
+  [1m[35mSQL (0.0ms)[0m  SET client_min_messages TO 'panic'
+  [1m[36mSQL (0.0ms)[0m  [1mSET standard_conforming_strings = on[0m
+  [1m[35mSQL (0.0ms)[0m  SET client_min_messages TO 'notice'
+  [1m[36mSQL (0.0ms)[0m  [1mSHOW TIME ZONE[0m
+  [1m[36mSQL (29.0ms)[0m  [1mSHOW client_min_messages[0m
+  [1m[35mSQL (0.0ms)[0m  SET client_min_messages TO 'panic'
+  [1m[36mSQL (0.0ms)[0m  [1mSET standard_conforming_strings = on[0m
+  [1m[35mSQL (1.0ms)[0m  SET client_min_messages TO 'notice'
+  [1m[36mSQL (0.0ms)[0m  [1mSHOW TIME ZONE[0m
+PGError: ERROR:  null value in column "product_id" violates not-null constraint
+: UPDATE "product_tariffs" SET "product_id" = NULL WHERE "product_tariffs"."product_id" = 1 AND "product_tariffs"."product_id" = 1 AND "product_tariffs"."tariff_id" = 2 AND "product_tariffs"."tariff_start_date" = '2010-11-20'
+  [1m[36mSQL (1.0ms)[0m  [1mSHOW client_min_messages[0m
+  [1m[35mSQL (0.0ms)[0m  SET client_min_messages TO 'panic'
+  [1m[36mSQL (0.0ms)[0m  [1mSET standard_conforming_strings = on[0m
+  [1m[35mSQL (0.0ms)[0m  SET client_min_messages TO 'notice'
+  [1m[36mSQL (0.0ms)[0m  [1mSHOW TIME ZONE[0m
+  [1m[36mSQL (1.0ms)[0m  [1mSHOW client_min_messages[0m
+  [1m[35mSQL (0.0ms)[0m  SET client_min_messages TO 'panic'
+  [1m[36mSQL (1.0ms)[0m  [1mSET standard_conforming_strings = on[0m
+  [1m[35mSQL (0.0ms)[0m  SET client_min_messages TO 'notice'
+  [1m[36mSQL (0.0ms)[0m  [1mSHOW TIME ZONE[0m
+  [1m[36mSQL (0.0ms)[0m  [1mSHOW client_min_messages[0m
+  [1m[35mSQL (0.0ms)[0m  SET client_min_messages TO 'panic'
+  [1m[36mSQL (0.0ms)[0m  [1mSET standard_conforming_strings = on[0m
+  [1m[35mSQL (15.6ms)[0m  SET client_min_messages TO 'notice'
+  [1m[36mSQL (0.0ms)[0m  [1mSHOW TIME ZONE[0m
+  [1m[36mSQL (0.0ms)[0m  [1mSHOW client_min_messages[0m
+  [1m[35mSQL (0.0ms)[0m  SET client_min_messages TO 'panic'
+  [1m[36mSQL (0.0ms)[0m  [1mSET standard_conforming_strings = on[0m
+  [1m[35mSQL (0.0ms)[0m  SET client_min_messages TO 'notice'
+  [1m[36mSQL (0.0ms)[0m  [1mSHOW TIME ZONE[0m
+  [1m[36mSQL (0.0ms)[0m  [1mSHOW client_min_messages[0m
+  [1m[35mSQL (0.0ms)[0m  SET client_min_messages TO 'panic'
+  [1m[36mSQL (0.0ms)[0m  [1mSET standard_conforming_strings = on[0m
+  [1m[35mSQL (0.0ms)[0m  SET client_min_messages TO 'notice'
+  [1m[36mSQL (0.0ms)[0m  [1mSHOW TIME ZONE[0m
+  [1m[36mSQL (0.0ms)[0m  [1mSHOW client_min_messages[0m
+  [1m[35mSQL (0.0ms)[0m  SET client_min_messages TO 'panic'
+  [1m[36mSQL (0.0ms)[0m  [1mSET standard_conforming_strings = on[0m
+  [1m[35mSQL (0.0ms)[0m  SET client_min_messages TO 'notice'
+  [1m[36mSQL (0.0ms)[0m  [1mSHOW TIME ZONE[0m
+  [1m[36mSQL (0.0ms)[0m  [1mSHOW client_min_messages[0m
+  [1m[35mSQL (0.0ms)[0m  SET client_min_messages TO 'panic'
+  [1m[36mSQL (0.0ms)[0m  [1mSET standard_conforming_strings = on[0m
+  [1m[35mSQL (0.0ms)[0m  SET client_min_messages TO 'notice'
+  [1m[36mSQL (0.0ms)[0m  [1mSHOW TIME ZONE[0m
+  [1m[36mSQL (0.0ms)[0m  [1mSHOW client_min_messages[0m
+  [1m[35mSQL (0.0ms)[0m  SET client_min_messages TO 'panic'
+  [1m[36mSQL (0.0ms)[0m  [1mSET standard_conforming_strings = on[0m
+  [1m[35mSQL (0.0ms)[0m  SET client_min_messages TO 'notice'
+  [1m[36mSQL (0.0ms)[0m  [1mSHOW TIME ZONE[0m
+  [1m[36mSQL (0.0ms)[0m  [1mSHOW client_min_messages[0m
+  [1m[35mSQL (0.0ms)[0m  SET client_min_messages TO 'panic'
+  [1m[36mSQL (0.0ms)[0m  [1mSET standard_conforming_strings = on[0m
+  [1m[35mSQL (0.0ms)[0m  SET client_min_messages TO 'notice'
+  [1m[36mSQL (0.0ms)[0m  [1mSHOW TIME ZONE[0m
+  [1m[36mSQL (0.0ms)[0m  [1mSHOW client_min_messages[0m
+  [1m[35mSQL (0.0ms)[0m  SET client_min_messages TO 'panic'
+  [1m[36mSQL (0.0ms)[0m  [1mSET standard_conforming_strings = on[0m
+  [1m[35mSQL (0.0ms)[0m  SET client_min_messages TO 'notice'
+  [1m[36mSQL (0.0ms)[0m  [1mSHOW TIME ZONE[0m
+  [1m[36mSQL (0.0ms)[0m  [1mSHOW client_min_messages[0m
+  [1m[35mSQL (0.0ms)[0m  SET client_min_messages TO 'panic'
+  [1m[36mSQL (0.0ms)[0m  [1mSET standard_conforming_strings = on[0m
+  [1m[35mSQL (0.0ms)[0m  SET client_min_messages TO 'notice'
+  [1m[36mSQL (0.0ms)[0m  [1mSHOW TIME ZONE[0m
+  [1m[36mSQL (0.0ms)[0m  [1mSHOW client_min_messages[0m
+  [1m[35mSQL (0.0ms)[0m  SET client_min_messages TO 'panic'
+  [1m[36mSQL (0.0ms)[0m  [1mSET standard_conforming_strings = on[0m
+  [1m[35mSQL (0.0ms)[0m  SET client_min_messages TO 'notice'
+  [1m[36mSQL (15.6ms)[0m  [1mSHOW TIME ZONE[0m
+  [1m[36mSQL (0.0ms)[0m  [1mSHOW client_min_messages[0m
+  [1m[35mSQL (0.0ms)[0m  SET client_min_messages TO 'panic'
+  [1m[36mSQL (0.0ms)[0m  [1mSET standard_conforming_strings = on[0m
+  [1m[35mSQL (0.0ms)[0m  SET client_min_messages TO 'notice'
+  [1m[36mSQL (0.0ms)[0m  [1mSHOW TIME ZONE[0m
+  [1m[36mSQL (0.0ms)[0m  [1mSHOW client_min_messages[0m
+  [1m[35mSQL (0.0ms)[0m  SET client_min_messages TO 'panic'
+  [1m[36mSQL (0.0ms)[0m  [1mSET standard_conforming_strings = on[0m
+  [1m[35mSQL (0.0ms)[0m  SET client_min_messages TO 'notice'
+  [1m[36mSQL (0.0ms)[0m  [1mSHOW TIME ZONE[0m
+  [1m[36mSQL (0.0ms)[0m  [1mSHOW client_min_messages[0m
+  [1m[35mSQL (0.0ms)[0m  SET client_min_messages TO 'panic'
+  [1m[36mSQL (0.0ms)[0m  [1mSET standard_conforming_strings = on[0m
+  [1m[35mSQL (0.0ms)[0m  SET client_min_messages TO 'notice'
+  [1m[36mSQL (0.0ms)[0m  [1mSHOW TIME ZONE[0m
+  [1m[36mSQL (0.0ms)[0m  [1mSHOW client_min_messages[0m
+  [1m[35mSQL (0.0ms)[0m  SET client_min_messages TO 'panic'
+  [1m[36mSQL (0.0ms)[0m  [1mSET standard_conforming_strings = on[0m
+  [1m[35mSQL (0.0ms)[0m  SET client_min_messages TO 'notice'
+  [1m[36mSQL (0.0ms)[0m  [1mSHOW TIME ZONE[0m
+  [1m[36mSQL (0.0ms)[0m  [1mSHOW client_min_messages[0m
+  [1m[35mSQL (0.0ms)[0m  SET client_min_messages TO 'panic'
+  [1m[36mSQL (0.0ms)[0m  [1mSET standard_conforming_strings = on[0m
+  [1m[35mSQL (0.0ms)[0m  SET client_min_messages TO 'notice'
+  [1m[36mSQL (0.0ms)[0m  [1mSHOW TIME ZONE[0m
+  [1m[36mSQL (0.0ms)[0m  [1mSHOW client_min_messages[0m
+  [1m[35mSQL (0.0ms)[0m  SET client_min_messages TO 'panic'
+  [1m[36mSQL (0.0ms)[0m  [1mSET standard_conforming_strings = on[0m
+  [1m[35mSQL (0.0ms)[0m  SET client_min_messages TO 'notice'
+  [1m[36mSQL (0.0ms)[0m  [1mSHOW TIME ZONE[0m
+PGError: ERROR:  column "tariff_idstart_date" does not exist
+LINE 1: SELECT COUNT(DISTINCT tariff_idstart_date) FROM "tariffs" LE...
+                              ^
+: SELECT COUNT(DISTINCT tariff_idstart_date) FROM "tariffs" LEFT OUTER JOIN "product_tariffs" ON "product_tariffs"."tariff_id" = "tariffs"."tariff_id" AND "product_tariffs"."tariff_start_date" = "tariffs"."start_date"
+PGError: ERROR:  operator does not exist: character varying = integer
+LINE 1: ...ments".person_type = 'User') AND ("comments".person_id = 1))
+                                                                  ^
+HINT:  No operator matches the given name and argument type(s). You might need to add explicit type casts.
+: SELECT "hacks".* FROM "hacks" INNER JOIN "comments" ON ("hacks"."name" = "comments"."hack_id") WHERE (("comments".person_type = 'User') AND ("comments".person_id = 1))
+  [1m[36mSQL (0.0ms)[0m  [1mSHOW client_min_messages[0m
+  [1m[35mSQL (0.0ms)[0m  SET client_min_messages TO 'panic'
+  [1m[36mSQL (0.0ms)[0m  [1mSET standard_conforming_strings = on[0m
+  [1m[35mSQL (0.0ms)[0m  SET client_min_messages TO 'notice'
+  [1m[36mSQL (0.0ms)[0m  [1mSHOW TIME ZONE[0m
+  [1m[36mSQL (0.0ms)[0m  [1mSHOW client_min_messages[0m
+  [1m[35mSQL (0.0ms)[0m  SET client_min_messages TO 'panic'
+  [1m[36mSQL (0.0ms)[0m  [1mSET standard_conforming_strings = on[0m
+  [1m[35mSQL (0.0ms)[0m  SET client_min_messages TO 'notice'
+  [1m[36mSQL (0.0ms)[0m  [1mSHOW TIME ZONE[0m
+  [1m[36mSQL (0.0ms)[0m  [1mSHOW client_min_messages[0m
+  [1m[35mSQL (0.0ms)[0m  SET client_min_messages TO 'panic'
+  [1m[36mSQL (0.0ms)[0m  [1mSET standard_conforming_strings = on[0m
+  [1m[35mSQL (0.0ms)[0m  SET client_min_messages TO 'notice'
+  [1m[36mSQL (0.0ms)[0m  [1mSHOW TIME ZONE[0m
+  [1m[36mSQL (0.0ms)[0m  [1mSHOW client_min_messages[0m
+  [1m[35mSQL (0.0ms)[0m  SET client_min_messages TO 'panic'
+  [1m[36mSQL (0.0ms)[0m  [1mSET standard_conforming_strings = on[0m
+  [1m[35mSQL (0.0ms)[0m  SET client_min_messages TO 'notice'
+  [1m[36mSQL (0.0ms)[0m  [1mSHOW TIME ZONE[0m
+  [1m[36mSQL (0.0ms)[0m  [1mSHOW client_min_messages[0m
+  [1m[35mSQL (0.0ms)[0m  SET client_min_messages TO 'panic'
+  [1m[36mSQL (0.0ms)[0m  [1mSET standard_conforming_strings = on[0m
+  [1m[35mSQL (0.0ms)[0m  SET client_min_messages TO 'notice'
+  [1m[36mSQL (0.0ms)[0m  [1mSHOW TIME ZONE[0m
+  [1m[36mSQL (0.0ms)[0m  [1mSHOW client_min_messages[0m
+  [1m[35mSQL (0.0ms)[0m  SET client_min_messages TO 'panic'
+  [1m[36mSQL (0.0ms)[0m  [1mSET standard_conforming_strings = on[0m
+  [1m[35mSQL (0.0ms)[0m  SET client_min_messages TO 'notice'
+  [1m[36mSQL (0.0ms)[0m  [1mSHOW TIME ZONE[0m
+  [1m[36mSQL (0.0ms)[0m  [1mSHOW client_min_messages[0m
+  [1m[35mSQL (0.0ms)[0m  SET client_min_messages TO 'panic'
+  [1m[36mSQL (15.6ms)[0m  [1mSET standard_conforming_strings = on[0m
+  [1m[35mSQL (0.0ms)[0m  SET client_min_messages TO 'notice'
+  [1m[36mSQL (0.0ms)[0m  [1mSHOW TIME ZONE[0m
+  [1m[36mSQL (0.0ms)[0m  [1mSHOW client_min_messages[0m
+  [1m[35mSQL (0.0ms)[0m  SET client_min_messages TO 'panic'
+  [1m[36mSQL (0.0ms)[0m  [1mSET standard_conforming_strings = on[0m
+  [1m[35mSQL (0.0ms)[0m  SET client_min_messages TO 'notice'
+  [1m[36mSQL (0.0ms)[0m  [1mSHOW TIME ZONE[0m
+PGError: ERROR:  column "tariff_idstart_date" does not exist
+LINE 1: SELECT COUNT(DISTINCT tariff_idstart_date) FROM "tariffs" LE...
+                              ^
+: SELECT COUNT(DISTINCT tariff_idstart_date) FROM "tariffs" LEFT OUTER JOIN "product_tariffs" ON "product_tariffs"."tariff_id" = "tariffs"."tariff_id" AND "product_tariffs"."tariff_start_date" = "tariffs"."start_date"
+PGError: ERROR:  operator does not exist: character varying = integer
+LINE 1: ...ments".person_type = 'User') AND ("comments".person_id = 1))
+                                                                  ^
+HINT:  No operator matches the given name and argument type(s). You might need to add explicit type casts.
+: SELECT "hacks".* FROM "hacks" INNER JOIN "comments" ON ("hacks"."name" = "comments"."hack_id") WHERE (("comments".person_type = 'User') AND ("comments".person_id = 1))
+  [1m[36mSQL (0.0ms)[0m  [1mSHOW client_min_messages[0m
+  [1m[35mSQL (0.0ms)[0m  SET client_min_messages TO 'panic'
+  [1m[36mSQL (0.0ms)[0m  [1mSET standard_conforming_strings = on[0m
+  [1m[35mSQL (0.0ms)[0m  SET client_min_messages TO 'notice'
+  [1m[36mSQL (0.0ms)[0m  [1mSHOW TIME ZONE[0m
+  [1m[36mSQL (0.0ms)[0m  [1mSHOW client_min_messages[0m
+  [1m[35mSQL (0.0ms)[0m  SET client_min_messages TO 'panic'
+  [1m[36mSQL (0.0ms)[0m  [1mSET standard_conforming_strings = on[0m
+  [1m[35mSQL (0.0ms)[0m  SET client_min_messages TO 'notice'
+  [1m[36mSQL (0.0ms)[0m  [1mSHOW TIME ZONE[0m
+  [1m[36mSQL (0.0ms)[0m  [1mSHOW client_min_messages[0m
+  [1m[35mSQL (0.0ms)[0m  SET client_min_messages TO 'panic'
+  [1m[36mSQL (0.0ms)[0m  [1mSET standard_conforming_strings = on[0m
+  [1m[35mSQL (0.0ms)[0m  SET client_min_messages TO 'notice'
+  [1m[36mSQL (0.0ms)[0m  [1mSHOW TIME ZONE[0m
+  [1m[36mSQL (1.0ms)[0m  [1mSHOW client_min_messages[0m
+  [1m[35mSQL (0.0ms)[0m  SET client_min_messages TO 'panic'
+  [1m[36mSQL (0.0ms)[0m  [1mSET standard_conforming_strings = on[0m
+  [1m[35mSQL (1.0ms)[0m  SET client_min_messages TO 'notice'
+  [1m[36mSQL (0.0ms)[0m  [1mSHOW TIME ZONE[0m
+PGError: ERROR:  null value in column "franchise_id" violates not-null constraint
+: INSERT INTO "restaurants_suburbs" ("suburb_id", "city_id") VALUES (22, 22)
+  [1m[36mSQL (0.0ms)[0m  [1mSHOW client_min_messages[0m
+  [1m[35mSQL (1.0ms)[0m  SET client_min_messages TO 'panic'
+  [1m[36mSQL (0.0ms)[0m  [1mSET standard_conforming_strings = on[0m
+  [1m[35mSQL (0.0ms)[0m  SET client_min_messages TO 'notice'
+  [1m[36mSQL (0.0ms)[0m  [1mSHOW TIME ZONE[0m
+  [1m[36mSQL (0.0ms)[0m  [1mSHOW client_min_messages[0m
+  [1m[35mSQL (0.0ms)[0m  SET client_min_messages TO 'panic'
+  [1m[36mSQL (0.0ms)[0m  [1mSET standard_conforming_strings = on[0m
+  [1m[35mSQL (1.0ms)[0m  SET client_min_messages TO 'notice'
+  [1m[36mSQL (0.0ms)[0m  [1mSHOW TIME ZONE[0m
+  [1m[36mSQL (0.0ms)[0m  [1mSHOW client_min_messages[0m
+  [1m[35mSQL (0.0ms)[0m  SET client_min_messages TO 'panic'
+  [1m[36mSQL (0.0ms)[0m  [1mSET standard_conforming_strings = on[0m
+  [1m[35mSQL (0.0ms)[0m  SET client_min_messages TO 'notice'
+  [1m[36mSQL (0.0ms)[0m  [1mSHOW TIME ZONE[0m
+  [1m[36mSQL (1.0ms)[0m  [1mSHOW client_min_messages[0m
+  [1m[35mSQL (0.0ms)[0m  SET client_min_messages TO 'panic'
+  [1m[36mSQL (0.0ms)[0m  [1mSET standard_conforming_strings = on[0m
+  [1m[35mSQL (0.0ms)[0m  SET client_min_messages TO 'notice'
+  [1m[36mSQL (1.0ms)[0m  [1mSHOW TIME ZONE[0m
+  [1m[36mSQL (0.0ms)[0m  [1mSHOW client_min_messages[0m
+  [1m[35mSQL (1.0ms)[0m  SET client_min_messages TO 'panic'
+  [1m[36mSQL (0.0ms)[0m  [1mSET standard_conforming_strings = on[0m
+  [1m[35mSQL (0.0ms)[0m  SET client_min_messages TO 'notice'
+  [1m[36mSQL (0.0ms)[0m  [1mSHOW TIME ZONE[0m
+  [1m[36mSQL (1.0ms)[0m  [1mSHOW client_min_messages[0m
+  [1m[35mSQL (1.0ms)[0m  SET client_min_messages TO 'panic'
+  [1m[36mSQL (0.0ms)[0m  [1mSET standard_conforming_strings = on[0m
+  [1m[35mSQL (0.0ms)[0m  SET client_min_messages TO 'notice'
+  [1m[36mSQL (0.0ms)[0m  [1mSHOW TIME ZONE[0m
+  [1m[36mSQL (1.0ms)[0m  [1mSHOW client_min_messages[0m
+  [1m[35mSQL (1.0ms)[0m  SET client_min_messages TO 'panic'
+  [1m[36mSQL (0.0ms)[0m  [1mSET standard_conforming_strings = on[0m
+  [1m[35mSQL (0.0ms)[0m  SET client_min_messages TO 'notice'
+  [1m[36mSQL (1.0ms)[0m  [1mSHOW TIME ZONE[0m
+  [1m[36mSQL (0.0ms)[0m  [1mSHOW client_min_messages[0m
+  [1m[35mSQL (0.0ms)[0m  SET client_min_messages TO 'panic'
+  [1m[36mSQL (0.0ms)[0m  [1mSET standard_conforming_strings = on[0m
+  [1m[35mSQL (0.0ms)[0m  SET client_min_messages TO 'notice'
+  [1m[36mSQL (0.0ms)[0m  [1mSHOW TIME ZONE[0m
+  [1m[36mSQL (0.0ms)[0m  [1mSHOW client_min_messages[0m
+  [1m[35mSQL (1.0ms)[0m  SET client_min_messages TO 'panic'
+  [1m[36mSQL (0.0ms)[0m  [1mSET standard_conforming_strings = on[0m
+  [1m[35mSQL (0.0ms)[0m  SET client_min_messages TO 'notice'
+  [1m[36mSQL (0.0ms)[0m  [1mSHOW TIME ZONE[0m
+  [1m[36mSQL (0.0ms)[0m  [1mSHOW client_min_messages[0m
+  [1m[35mSQL (0.0ms)[0m  SET client_min_messages TO 'panic'
+  [1m[36mSQL (0.0ms)[0m  [1mSET standard_conforming_strings = on[0m
+  [1m[35mSQL (0.0ms)[0m  SET client_min_messages TO 'notice'
+  [1m[36mSQL (0.0ms)[0m  [1mSHOW TIME ZONE[0m
+  [1m[36mSQL (1.0ms)[0m  [1mSHOW client_min_messages[0m
+  [1m[35mSQL (0.0ms)[0m  SET client_min_messages TO 'panic'
+  [1m[36mSQL (0.0ms)[0m  [1mSET standard_conforming_strings = on[0m
+  [1m[35mSQL (1.0ms)[0m  SET client_min_messages TO 'notice'
+  [1m[36mSQL (0.0ms)[0m  [1mSHOW TIME ZONE[0m
+  [1m[36mSQL (0.0ms)[0m  [1mSHOW client_min_messages[0m
+  [1m[35mSQL (0.0ms)[0m  SET client_min_messages TO 'panic'
+  [1m[36mSQL (0.0ms)[0m  [1mSET standard_conforming_strings = on[0m
+  [1m[35mSQL (0.0ms)[0m  SET client_min_messages TO 'notice'
+  [1m[36mSQL (1.0ms)[0m  [1mSHOW TIME ZONE[0m
+PGError: ERROR:  column "tariff_idstart_date" does not exist
+LINE 1: SELECT COUNT(DISTINCT tariff_idstart_date) FROM "tariffs" LE...
+                              ^
+: SELECT COUNT(DISTINCT tariff_idstart_date) FROM "tariffs" LEFT OUTER JOIN "product_tariffs" ON "product_tariffs"."tariff_id" = "tariffs"."tariff_id" AND "product_tariffs"."tariff_start_date" = "tariffs"."start_date"
+PGError: ERROR:  operator does not exist: character varying = integer
+LINE 1: ...ments".person_type = 'User') AND ("comments".person_id = 1))
+                                                                  ^
+HINT:  No operator matches the given name and argument type(s). You might need to add explicit type casts.
+: SELECT "hacks".* FROM "hacks" INNER JOIN "comments" ON ("hacks"."name" = "comments"."hack_id") WHERE (("comments".person_type = 'User') AND ("comments".person_id = 1))
+  [1m[36mSQL (0.0ms)[0m  [1mSHOW client_min_messages[0m
+  [1m[35mSQL (0.0ms)[0m  SET client_min_messages TO 'panic'
+  [1m[36mSQL (0.0ms)[0m  [1mSET standard_conforming_strings = on[0m
+  [1m[35mSQL (0.0ms)[0m  SET client_min_messages TO 'notice'
+  [1m[36mSQL (0.0ms)[0m  [1mSHOW TIME ZONE[0m
+PGError: ERROR:  column "tariff_idstart_date" does not exist
+LINE 1: SELECT COUNT(DISTINCT tariff_idstart_date) FROM "tariffs" LE...
+                              ^
+: SELECT COUNT(DISTINCT tariff_idstart_date) FROM "tariffs" LEFT OUTER JOIN "product_tariffs" ON "product_tariffs"."tariff_id" = "tariffs"."tariff_id" AND "product_tariffs"."tariff_start_date" = "tariffs"."start_date"
+PGError: ERROR:  operator does not exist: character varying = integer
+LINE 1: ...ments".person_type = 'User') AND ("comments".person_id = 1))
+                                                                  ^
+HINT:  No operator matches the given name and argument type(s). You might need to add explicit type casts.
+: SELECT "hacks".* FROM "hacks" INNER JOIN "comments" ON ("hacks"."name" = "comments"."hack_id") WHERE (("comments".person_type = 'User') AND ("comments".person_id = 1))
+  [1m[36mSQL (0.0ms)[0m  [1mSHOW client_min_messages[0m
+  [1m[35mSQL (0.0ms)[0m  SET client_min_messages TO 'panic'
+  [1m[36mSQL (0.0ms)[0m  [1mSET standard_conforming_strings = on[0m
+  [1m[35mSQL (1.0ms)[0m  SET client_min_messages TO 'notice'
+  [1m[36mSQL (0.0ms)[0m  [1mSHOW TIME ZONE[0m
+PGError: ERROR:  column "tariff_idstart_date" does not exist
+LINE 1: SELECT COUNT(DISTINCT tariff_idstart_date) FROM "tariffs" LE...
+                              ^
+: SELECT COUNT(DISTINCT tariff_idstart_date) FROM "tariffs" LEFT OUTER JOIN "product_tariffs" ON "product_tariffs"."tariff_id" = "tariffs"."tariff_id" AND "product_tariffs"."tariff_start_date" = "tariffs"."start_date"
+PGError: ERROR:  operator does not exist: character varying = integer
+LINE 1: ...ments".person_type = 'User') AND ("comments".person_id = 1))
+                                                                  ^
+HINT:  No operator matches the given name and argument type(s). You might need to add explicit type casts.
+: SELECT "hacks".* FROM "hacks" INNER JOIN "comments" ON ("hacks"."name" = "comments"."hack_id") WHERE (("comments".person_type = 'User') AND ("comments".person_id = 1))
+  [1m[36mSQL (35.0ms)[0m  [1mSHOW client_min_messages[0m
+  [1m[35mSQL (0.0ms)[0m  SET client_min_messages TO 'panic'
+  [1m[36mSQL (0.0ms)[0m  [1mSET standard_conforming_strings = on[0m
+  [1m[35mSQL (1.0ms)[0m  SET client_min_messages TO 'notice'
+  [1m[36mSQL (0.0ms)[0m  [1mSHOW TIME ZONE[0m
+PGError: ERROR:  column "tariff_idstart_date" does not exist
+LINE 1: SELECT COUNT(DISTINCT tariff_idstart_date) FROM "tariffs" LE...
+                              ^
+: SELECT COUNT(DISTINCT tariff_idstart_date) FROM "tariffs" LEFT OUTER JOIN "product_tariffs" ON "product_tariffs"."tariff_id" = "tariffs"."tariff_id" AND "product_tariffs"."tariff_start_date" = "tariffs"."start_date"
+PGError: ERROR:  operator does not exist: character varying = integer
+LINE 1: ...ments".person_type = 'User') AND ("comments".person_id = 1))
+                                                                  ^
+HINT:  No operator matches the given name and argument type(s). You might need to add explicit type casts.
+: SELECT "hacks".* FROM "hacks" INNER JOIN "comments" ON ("hacks"."name" = "comments"."hack_id") WHERE (("comments".person_type = 'User') AND ("comments".person_id = 1))
+  [1m[36mSQL (1.0ms)[0m  [1mSHOW client_min_messages[0m
+  [1m[35mSQL (0.0ms)[0m  SET client_min_messages TO 'panic'
+  [1m[36mSQL (0.0ms)[0m  [1mSET standard_conforming_strings = on[0m
+  [1m[35mSQL (0.0ms)[0m  SET client_min_messages TO 'notice'
+  [1m[36mSQL (0.0ms)[0m  [1mSHOW TIME ZONE[0m
+PGError: ERROR:  column "tariff_idstart_date" does not exist
+LINE 1: SELECT COUNT(DISTINCT tariff_idstart_date) FROM "tariffs" LE...
+                              ^
+: SELECT COUNT(DISTINCT tariff_idstart_date) FROM "tariffs" LEFT OUTER JOIN "product_tariffs" ON "product_tariffs"."tariff_id" = "tariffs"."tariff_id" AND "product_tariffs"."tariff_start_date" = "tariffs"."start_date"
+PGError: ERROR:  operator does not exist: character varying = integer
+LINE 1: ...ments".person_type = 'User') AND ("comments".person_id = 1))
+                                                                  ^
+HINT:  No operator matches the given name and argument type(s). You might need to add explicit type casts.
+: SELECT "hacks".* FROM "hacks" INNER JOIN "comments" ON ("hacks"."name" = "comments"."hack_id") WHERE (("comments".person_type = 'User') AND ("comments".person_id = 1))

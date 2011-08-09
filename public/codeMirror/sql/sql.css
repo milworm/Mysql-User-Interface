@@ -1,0 +1,67 @@
+/*span.plsql-keyword {*/
+/*    color: #79ABF2;*/
+/*}*/
+/*span.plsql-var {*/
+/*    color: red;*/
+/*}*/
+/*span.plsql-comment {*/
+/*    color: #696969;*/
+/*}*/
+/*span.plsql-string {*/
+/*    color: #939393;*/
+/*}*/
+/*span.plsql-operator {*/
+/*    color: 79ABF2;*/
+/*}*/
+/*span.plsql-word {*/
+/*    color: white;*/
+/*}*/
+/*span.plsql-function {*/
+/*    color: #96EA27;*/
+/*}*/
+/*span.plsql-sqlplus {*/
+/*    color: #96EA27;*/
+/*}*/
+/*span.plsql-type {*/
+/*    color: #96EA27;*/
+/*}*/
+/*span.plsql-separator {*/
+/*    color: #96EA27;*/
+/*}*/
+/*span.plsql-number {*/
+/*    color: #96EA27;*/
+/*}*/
+
+span.plsql-keyword {
+    color: #0071A5;
+}
+span.plsql-var {
+    color: red;
+}
+span.plsql-comment {
+    color: #a70;
+}
+span.plsql-string {
+    color: #939393;
+}
+span.plsql-operator {
+    color: #90B;
+}
+span.plsql-word {
+    color: #181818;
+}
+span.plsql-function {
+    color: #90B;
+}
+span.plsql-sqlplus {
+    color: #90B;
+}
+span.plsql-type {
+    color: #90B;
+}
+span.plsql-separator {
+    color: #90B;
+}
+span.plsql-number {
+    color: #90B;
+}

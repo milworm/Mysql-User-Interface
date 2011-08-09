@@ -1,0 +1,19 @@
+<html>
+	<head>
+		<title><%= @title%></title>
+<!--		, "/ext-3.2.1/resources/css/xtheme-gray"-->
+		<%= stylesheet_link_tag "/ext-3.3.3/resources/css/ext-all", "main",'/codeMirror/lib/codemirror','/codeMirror/sql/sql'%>
+		<%= javascript_include_tag '/ext-3.2.1/adapter/ext/ext-base-debug',
+								   '/ext-3.2.1/ext-all-debug',
+								   '/ext-3.2.1/ux/RowExpander',
+								   '/codeMirror/lib/codemirror',
+								   '/codeMirror/sql/sql',
+								   '/codeMirror/sql/complete'%>
+		<%= javascript_include_tag 'config','links'%>
+		<%= javascript_include_tag Dir["public/javascripts/modules/**/*.js"].sort.inject [] {|a,i| a.push i.split('/javascripts/')[1]} %>
+		<%= javascript_include_tag 'application'%>
+	</head>
+	<body>
+		<%= yield %>
+	</body>
+</html>
