@@ -14,6 +14,14 @@ Application has some features like:
        Taksbar - feature to manage windows in application,
        SystemInformationWidget - This panel contains special information about opened window, for example if your are viewing the table-data you can see it's system information just opening the right panel
 
+SCREENSHOTS
+http://xmages.net/show.php/3037067_1-png.html
+http://xmages.net/show.php/3037068_2-png.html
+http://xmages.net/show.php/3037069_3-png.html
+http://xmages.net/show.php/3037070_4-png.html
+http://xmages.net/show.php/3037071_5-png.html
+http://xmages.net/show.php/3037072_6-png.html
+
 INSTALLATION
 To install this application, you must have installed 
     1. ruby 1.9.2.p180
