@@ -1,8 +1,9 @@
 <html>
 	<head>
-		<title><%= @title%></title>
-<!--		, "/ext-3.2.1/resources/css/xtheme-gray"-->
-		<%= stylesheet_link_tag "/ext-3.3.3/resources/css/ext-all", "main",'/codeMirror/lib/codemirror','/codeMirror/sql/sql'%>
+		<title>
+			<%= @title%>
+		</title>
+		<%= stylesheet_link_tag "/ext-3.3.3/resources/css/ext-all", "/ext-3.2.1/resources/css/xtheme-gray", "main" %>
 		<%= javascript_include_tag '/ext-3.2.1/adapter/ext/ext-base-debug',
 								   '/ext-3.2.1/ext-all-debug',
 								   '/ext-3.2.1/ux/RowExpander',

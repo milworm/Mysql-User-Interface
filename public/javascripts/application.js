@@ -57,13 +57,5 @@ Ext.onReady(function(){
 		o = o || {}
 		o.msg = o.msg || Dbms.Constants.AJAX_COMUNICATION_ERROR;
 		Ext.ux.Toast.msg('Error', o.msg);
-		//new Ext.Window({
-		//	title : 'Error',
-		//	width : 600,
-		//	height : 400,
-		//	modal  : true,
-		//	layout : 'fit',
-		//	items : {html:o.msg}
-		//}).show();
 	},this);
 });

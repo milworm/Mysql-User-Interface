@@ -12,12 +12,7 @@ Dbms.Autocomplete.BackspaceHandler = Ext.extend(Dbms.Autocomplete.KeyHandler,{
 		this.controller.hideSuggestionBox();
 		//there are no characters to remove just return
 		if(this.rootEl.dom.textContent.length == 0)
-			return false;
-		
-		//var contentNode = selection.focusNode.parentNode
-		//
-		//this.setContextElement(contentNode.previousElementSibling);
-		//this.setContentElement(contentNode);
+			return false;	
 		
 		return true;
 	},
@@ -428,7 +423,8 @@ Dbms.Autocomplete.BackspaceHandler = Ext.extend(Dbms.Autocomplete.KeyHandler,{
 		
 		selectedNode.textContent = selectedNode.textContent.substr(0, startOffset-1) + selectedNode.textContent.substr(startOffset/*+unicodeCharLen*/);
 			
-		if(selectedNode.textContent.length == 0 || selectedNode.textContent == '\n'){
+		if(selectedNode.textContent.length == 0 || selectedNode.textContent == '\n'
+		   || selectedNode.className == 'tabElement'){
 			return this.deleteOneWord();
 		}
 		

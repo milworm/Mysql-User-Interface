@@ -284,28 +284,49 @@ Dbms.Autocomplete.Controller.prototype = {
 	},
 	onElementClick    : function(e) {
 		var cmp = Ext.getCmp(this.element.id + '-cmp');
+		var selection = window.getSelection();
+		var range = document.createRange();
+			
 		if(cmp && cmp.isDefaultText) {
 			this.element.dom.removeChild(this.element.dom.firstChild); //remove default text
 			cmp.isDefaultText = false;
 			
-			var selection = window.getSelection();
-			var range = document.createRange();
 			//create new autocomplete-context element
-			var context = this.createNewContextElement();
-			this.firstContextNode = context;
+			//var context = this.createNewContextElement();
+			//this.firstContextNode = context;
 			
 			this.createNewContentElement();
 			this.contentElement.innerHTML = '\n';
 			this.element.dom.innerHTML = '<p>'+this.element.dom.innerHTML+'</p>';
-				range.selectNodeContents(this.element.dom.firstChild.childNodes[1]);
-				range.setStart(this.element.dom.firstChild.childNodes[1], 0);
-				range.setEnd(this.element.dom.firstChild.childNodes[1], 0);
+				range.selectNodeContents(this.element.dom.firstChild.childNodes[0]);
+				range.setStart(this.element.dom.firstChild.childNodes[0], 0);
+				range.setEnd(this.element.dom.firstChild.childNodes[0], 0);
 				
 			this.undelitedLength = this.element.dom.innerHTML.length;
-			this.startLeftOffset = Ext.get(context).getX();
+			//this.startLeftOffset = Ext.get(context).getX();
 			
 			selection.removeAllRanges();
 			selection.addRange(range);
+		} else {
+			var baseNode = selection.baseNode;
+			
+			if(baseNode.nodeName == '#text') {
+				baseNode = baseNode.parentNode;
+			}
+			
+			if(baseNode.className == 'tabElement') {
+				var offset = 0;
+				
+				if(selection.baseOffset >= 2) {
+					offset = 1;
+				}
+				
+				selection.removeAllRanges();
+				range.selectNode(baseNode);
+				range.setStart(baseNode, offset);
+				range.setEnd(baseNode, offset);
+				selection.addRange(range);
+			}
 		}
 	},
 	refreshDictionary : function() {
@@ -331,16 +352,12 @@ Dbms.Autocomplete.Controller.prototype = {
 				this.tabHandler.process(e);
 				break;
 			}
-			//up key
-			case 38 : {
-				this.cursorHandler.process(e);
-				//this.onUpKeyPressed(e);
-				break;
-			}
-			//down key
+			case 37 :
+			case 38 :
+			case 39 : 
 			case 40 : {
 				this.cursorHandler.process(e);
-				//this.onDownKeyPressed(e);
+				//this.onUpKeyPressed(e);
 				break;
 			}
 			//enter
@@ -541,7 +558,6 @@ Dbms.Autocomplete.Controller.prototype = {
 	    if(this.currentRow > 1){
 			this.currentRow--;
 	    }
-		
 		
 	    
 	    return true;

@@ -1,6 +1,12 @@
 Ext.ns('Dbms.Autocomplete');
 
 Dbms.Autocomplete.TabHandler = Ext.extend(Dbms.Autocomplete.KeyHandler, {
+	constructor   : function() {
+		this.tabWidth = 4;
+		Dbms.Autocomplete.TabHandler.superclass.constructor.apply(this, arguments);
+		
+		Dbms.Core.MessageBus.on('Dbms.SqlWidget.TabWidthChange_'+this.controller.element.id, this.setTabWidth, this);
+	},
 	beforeProcess : function(e){
 		e.preventDefault();
 		
@@ -10,6 +16,12 @@ Dbms.Autocomplete.TabHandler = Ext.extend(Dbms.Autocomplete.KeyHandler, {
 	    }
 		
 		return true;
+	},
+	setTabWidth : function(newTabWidth) {
+		this.tabWidth = newTabWidth;
+	},
+	getTabWidth : function() {
+		return this.tabWidth;
 	},
 	process : function(e) {
 		if(!this.beforeProcess(e)){
@@ -33,7 +45,7 @@ Dbms.Autocomplete.TabHandler = Ext.extend(Dbms.Autocomplete.KeyHandler, {
 		}
 		
 		this.getContentElement().className = 'tabElement';
-	    this.getContentElement().innerHTML = "\t";
+	    this.getContentElement().innerHTML = this.getTabSpaces();
 		
 		this.range.attach(this.getContentElement(), 1, 1);
 		this.selection.clear();
@@ -41,23 +53,21 @@ Dbms.Autocomplete.TabHandler = Ext.extend(Dbms.Autocomplete.KeyHandler, {
 		
 	    return this.afterProcess(e);
 	},
+	getTabSpaces : function() {
+		for(var i=0,result='';i<this.tabWidth;i++,result+=' ');
+		return result;
+	},
 	afterEnterProcess : function(baseNode, e){
 		baseNode.innerHTML = '\n';
-		//var contextEl = baseNode.nextElementSibling;
-		//var contentEl = baseNode.nextElementSibling.nextElementSibling;
-		//var contextEl = baseNode.previousElementSibling;
 		var contentEl = baseNode.previousElementSibling;
 		
-		
-		//this.setContextElement(contextEl);
 		this.setContentElement(contentEl);
 		
 		if(contentEl.innerHTML.length == 0){
-			contentEl.innerHTML = "\t";
+			contentEl.innerHTML = this.getTabSpaces();
 		} else {
-			//this.setContextElement(this.insertContextAfter(baseNode));
 			this.setContentElement(this.insertContextAfter(baseNode));
-			this.getContentElement().innerHTML = '\t';
+			this.getContentElement().innerHTML = this.getTabSpaces();
 		}
 		
 		this.getContentElement().className = 'tabElement';

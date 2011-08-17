@@ -11,6 +11,7 @@ Dbms.RoutineManagement.BaseManager.Window = Ext.extend(Dbms.Taskbar.Window, {
 			minimizable : true,
 			maximized   : true,
 			constrain   : true,
+			tbar        : this.getTopToolbar(config.routineView.id),
 			renderTo    : Dbms.Core.Viewport.center.getEl(),
 			scope       : this,
 			listeners   : {
@@ -28,5 +29,10 @@ Dbms.RoutineManagement.BaseManager.Window = Ext.extend(Dbms.Taskbar.Window, {
 	onBeforeRender : function() {
 		this.setTitle(Ext.util.Format.capitalize(this.type)+' ' + this.databaseName + '.' + this.name);
 		this.add(this.routineView);
-	}
+	},
+    getTopToolbar : function(id) {
+        return new Dbms.SqlWidget.TopToolbar({
+            uniqueId : id
+        });
+    }
 });

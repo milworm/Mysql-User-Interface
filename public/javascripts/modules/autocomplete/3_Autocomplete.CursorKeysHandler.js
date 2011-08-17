@@ -5,7 +5,6 @@ Dbms.Autocomplete.CursorHandler = Ext.extend(Dbms.Autocomplete.KeyHandler, {
 		Dbms.Autocomplete.CursorHandler.superclass.constructor.call(this, config);
 	},
 	beforeProcess : function(e){
-		e.preventDefault();
 		return true;
 	},
 	onUpKey : function(e){
@@ -33,6 +32,77 @@ Dbms.Autocomplete.CursorHandler = Ext.extend(Dbms.Autocomplete.KeyHandler, {
 		}
 		this.moveDown(e);
 	    return false;
+	},
+	onRightKey : function(e) {
+		var anchorNode = this.selection.getAnchorNode();
+		var selection = this.selection.get();
+		
+		if(selection.baseOffset == selection.focusOffset) { //there are no any selections
+			if(selection.baseOffset == 0
+			   && anchorNode.className == 'tabElement') { // need to move cursor in 4 positions
+				e.preventDefault();
+				this.selection.clear();
+				this.range.attach(anchorNode, 1, 1);
+				this.selection.add(this.range.get());
+				
+				return ;
+			}
+			
+			// this is a single word
+			// and we stay at the last position
+			if(selection.baseOffset == anchorNode.innerText.length) {
+				if(anchorNode.nextElementSibling == undefined) {
+					return false;
+				} else {
+					if(anchorNode.nextElementSibling.className == 'tabElement') {
+						e.preventDefault();
+						this.selection.clear();
+						this.range.attach(anchorNode.nextElementSibling, 1, 1);
+						this.selection.add(this.range.get());
+						
+						return ;
+					} else {
+						return false;
+					}
+				}
+			}
+		} else { //user selects text
+			alert('test');
+		}
+	},
+	onLeftKey : function(e) {
+		var anchorNode = this.selection.getAnchorNode();
+		var selection = this.selection.get();
+		
+		if(selection.baseOffset == selection.focusOffset) { //there are no any selections
+			if(anchorNode.className == 'tabElement') {
+				if(selection.baseOffset == anchorNode.innerText.length) {
+					e.preventDefault();
+					this.selection.clear();
+					this.range.attach(anchorNode, 0, 0);
+					this.selection.add(this.range.get());
+					
+					return ;
+				}
+			} else {
+				if(selection.baseOffset == 0) {
+					if(anchorNode.previousElementSibling.className == 'tabElement') {
+						e.preventDefault();
+						this.selection.clear();
+						this.range.attach(anchorNode.previousElementSibling, 0, 0);
+						this.selection.add(this.range.get());
+						
+						return ;
+					} else {
+						return false;
+					}
+				} else {
+					return false;
+				}
+			}
+		} else { //user selects text
+			alert('test');
+		}
 	},
 	calculateTotalOffset : function(){
 	},
@@ -194,8 +264,18 @@ Dbms.Autocomplete.CursorHandler = Ext.extend(Dbms.Autocomplete.KeyHandler, {
 		}
 		
 		switch(e.keyCode || e.charCode){
+			case 37 : {
+				this.onLeftKey(e);
+				break;
+			}
+			
 			case 38 : {
 				this.onUpKey(e);
+				break;
+			}
+			
+			case 39 : {
+				this.onRightKey(e);
 				break;
 			}
 			

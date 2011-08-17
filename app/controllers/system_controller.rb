@@ -8,7 +8,7 @@ class SystemController < ApplicationController
             @rows.push name: item["Variable_name"], value: item["Value"]
         end
         # status
-        ActiveRecord::Base.connection.select_all('show status like "%uptime%"').each do |item|
+        ActiveRecord::Base.connection.select_all('show global status').each do |item|
             @rows.push name: item["Variable_name"], value: item["Value"]
         end
         

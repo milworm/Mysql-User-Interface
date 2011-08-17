@@ -13,6 +13,7 @@ Dbms.SqlWidget.View = Ext.extend(Ext.Panel, {
 				layout      : "fit",
 				split       : true,
 				minHeight 	: 150,
+                tbar        : this.getTopToolbar(config.uniqueId),
                 bbar        : this.getBottomToolbar()
             }, {
                 region : 'center',
@@ -58,6 +59,11 @@ Dbms.SqlWidget.View = Ext.extend(Ext.Panel, {
             query    : query,
             dbName   : this.dbName,
             uniqueId : this.uniqueId
+        });
+    },
+    getTopToolbar : function(id) {
+        return new Dbms.SqlWidget.TopToolbar({
+            uniqueId : id
         });
     }
 });

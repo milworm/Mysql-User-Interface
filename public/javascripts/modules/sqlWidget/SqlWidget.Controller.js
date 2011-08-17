@@ -22,6 +22,7 @@ Dbms.SqlWidget.Controller = Ext.extend(function(){}, {
 	factory : function(config) {
 		config.uniqueId = this.generateUniqueId();
 		Dbms.Core.MessageBus.on('Dbms.SqlWidget.ExecQuery_'+config.uniqueId, this.request, this);
+		
 		this.items.add(config.uniqueId, Dbms.SqlWidget.Factory.factory(config));
 		new Dbms.Autocomplete.Controller(config.uniqueId, config.dbName);
 	},

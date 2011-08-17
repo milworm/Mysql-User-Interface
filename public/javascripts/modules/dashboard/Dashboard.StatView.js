@@ -23,34 +23,29 @@ Dbms.Dashboard.StatView = Ext.extend(Ext.Panel,{
 						style  : 'font-size:13px'
 					},
 					items    : [{
-						autoEl : {
-							tag  : 'div'
-						},
-						html  : 'Host Name : {hostname}',
+						renderTpl  : 'Host Name : {hostname}',
 						ref   : '//hostnamePl'
 					}, {
-						autoEl : {
-							tag  : 'div'
-						},
-						html  : 'Server Version : {serverVersion}',
+						renderTpl  : 'Server Version : {serverVersion}',
 						ref   : '//serverVersionPl'
 					}, {
-						autoEl : {
-							tag  : 'div'
-						},
-						html  : 'Protocol Version : {protocolVersion}',
+						renderTpl  : 'Protocol Version : {protocolVersion}',
 						ref   : '//protocolVersionPl'
 					}, {
-						autoEl : {
-							tag  : 'div'
-						},
-						html  : 'Connection Character Set : {connectionCharSet}',
+						renderTpl  : 'Connection Character Set : {connectionCharSet}',
 						ref   : '//connectionCharSetPl'
 					}, {
-						autoEl : {
-							tag  : 'div'
-						},
+						renderTpl  : 'Server works : {uptime}',
 						ref   : '//uptimePl'
+					}, {
+						renderTpl : 'Processed queries : {queries}',
+						ref   	  : '//queriesPl'
+					}, {
+						renderTpl : 'Bytes Sent : {bytesSent}',
+						ref   	  : '//bytesSentPl'
+					}, {
+						renderTpl : 'Bytes Received : {bytesReceived}',
+						ref   	  : '//bytesReceivedPl'
 					}]
 				}]
 			}]
@@ -156,6 +151,7 @@ Dbms.Dashboard.StatView = Ext.extend(Ext.Panel,{
 					handler : function(){
 						Ext.StoreMgr.get('System.CpuStatStore').load();
 						Ext.StoreMgr.get('System.MemStatStore').load();
+						Ext.StoreMgr.get('System.VariableStore').load();
 					}
 				}]
 		}
@@ -171,24 +167,36 @@ Dbms.Dashboard.StatView = Ext.extend(Ext.Panel,{
 		this.updateStatEl('serverVersionPl',this.getVersion());
 		this.updateStatEl('protocolVersionPl',this.getProtocol());
 		this.updateStatEl('connectionCharSetPl',this.getConnectionCharSet());
+		this.updateStatEl('queriesPl',this.getQueries());
+		this.updateStatEl('bytesSentPl',this.getBytesSent());
+		this.updateStatEl('bytesReceivedPl',this.getBytesReceived());
 		this.updateStatEl('uptimePl',this.getUptime());
-		
-		this.sysInfo.getEl().show({
-			duration : 1
-		});
-		
 		this.startTimer();
+		this.sysInfo.getEl().show();
 		
 		return true;
 	},
 	updateStatEl : function(el, val) {
-		this[el].update(this[el].body.getAttribute('innerHTML').replace('{'+el.replace('Pl','')+'}', val));
+		var parts = this[el].renderTpl.split(':');
+		var html = '<div style="float:left;width:150px">' + parts[0] + '</div> : ';
+		
+		this[el].setSize(400);
+		this[el].update(html + parts[1].replace('{'+el.replace('Pl','')+'}', val));
 	},
 	getHostName : function(){
 		return this.mysqlVariableStore.getByName('hostname').get('value');
 	},
 	getVersion : function(){
 		return this.mysqlVariableStore.getByName('version').get('value');
+	},
+	getQueries : function(){
+		return this.mysqlVariableStore.getByName('Queries').get('value');
+	},
+	getBytesReceived : function(){
+		return this.mysqlVariableStore.getByName('Bytes_received').get('value');
+	},
+	getBytesSent : function(){
+		return this.mysqlVariableStore.getByName('Bytes_sent').get('value');
 	},
 	getVersionComment : function(){
 		return this.mysqlVariableStore.getByName('version_comment').get('value');
@@ -221,9 +229,13 @@ Dbms.Dashboard.StatView = Ext.extend(Ext.Panel,{
 		return days + ' days ' + hours + ' hours ' + min + ' min ' + sec + ' sec';
 	},
 	startTimer : function() {
-		setInterval(function() {
+		if(this.timer != undefined) {
+			return false;
+		}
+		
+		this.timer = setInterval(function() {
 			this.updateMysqlUpTime();
-			this.uptimePl.update(this.getUptime());
+			this.updateStatEl('uptimePl',this.getUptime());
 		}.createDelegate(this),1000);
 	}
 });
