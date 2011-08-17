@@ -12,7 +12,7 @@ Application has some features like:
        viewing tables, views - you can watch information stored in database tables, views, change page size for displaying, filtering data with your requirements
        Database Creation - it is possible to create new database,(right-mouse click on the root node in the tree panel)
        Taksbar - feature to manage windows in application,
-       SystemInformationWidget - This panel contains special information about opened window, for example if your are viewing the table-data you can see it's system information just opening the right panel
+	   SystemInformationWidget - This panel contains special information about opened window, for example if your are viewing the table-data you can see it's system information just opening the right panel
 
 SCREENSHOTS
 http://xmages.net/show.php/3037067_1-png.html
@@ -24,8 +24,9 @@ http://xmages.net/show.php/3037072_6-png.html
 
 INSTALLATION
 To install this application, you must have installed 
-    1. ruby 1.9.2.p180
-    2. gem  1.6.2
+	1. libmysqlclient-dev (to install in Ubuntu use apt-get install libmysqlclient-dev)
+    2. ruby 1.9.2.p180
+    3. gem  1.6.2
 The best way to install them, it's visit http://beginrescueend.com/rvm/install/ to install rvm. After you've installed rvm, 
 open the terminal, and enter the following commands.
 rvm install ruby-1.9.2-p180
