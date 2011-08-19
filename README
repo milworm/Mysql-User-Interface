@@ -14,6 +14,7 @@ Application has some features like:
        Taksbar - feature to manage windows in application,
 	   SystemInformationWidget - This panel contains special information about opened window, for example if your are viewing the table-data you can see it's system information just opening the right panel
 
+LICENSE: GPLv3
 SCREENSHOTS
 http://xmages.net/show.php/3037067_1-png.html
 http://xmages.net/show.php/3037068_2-png.html
