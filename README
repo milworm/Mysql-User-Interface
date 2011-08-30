@@ -33,12 +33,12 @@ open the terminal, and enter the following commands.
 rvm install ruby-1.9.2-p180
 cd /path/to/MysqlUI/
 rvm gemset create ror_dbms
-gem install bundle --version "= 1.0.15"
+gem install bundler --version "= 1.0.15"
 bundle install --local
 rails s
 
 If you have already installed ruby and rubygems without rvm, then in termial enter the following commands.
 cd /path/to/MysqlUI/
-gem install bundle --version "= 1.0.15"
+gem install bundler --version "= 1.0.15"
 bundle install --local
 rails s
