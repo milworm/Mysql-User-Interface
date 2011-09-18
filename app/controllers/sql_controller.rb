@@ -8,7 +8,7 @@ class SqlController < ApplicationController
           
       begin
         unless (query.gsub(/\n/,' ') =~ /^(select|show|describe|help|call)/i).nil?
-          @result[:rows] = @connection.select_rows query
+          @result[:rows] = @connection.select_all query
           @result[:fields] = @result[:rows].first.keys unless @result[:rows].first.nil?
         else
           @connection.execute query
