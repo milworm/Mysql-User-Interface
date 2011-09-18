@@ -25,7 +25,7 @@ Dbms.Autocomplete.Controller = function(elementId, dbName, highlightText) {
 	this.initKeyHandlers();
 	
 	this.scroller = new Dbms.Autocomplete.Scroller({
-		controller : this
+	    controller : this
 	});
 	
 	this.highlightText = highlightText || undefined;
@@ -97,6 +97,27 @@ Dbms.Autocomplete.Controller.prototype = {
 		});
 		
 		this.element.parent().mask('Loading data for typeahead...');
+		this.element.on('paste', this.onPasteEventHandler, this);
+	},
+	onPasteEventHandler : function(e, d, o) {
+	    e.preventDefault();
+	    
+	    var content = e.browserEvent.clipboardData.getData('text/plain');
+	    var highlightedContent = this.highlighter.highlight(content);
+	    this.element.dom.innerHTML = highlightedContent;
+	    
+	    var selection = window.getSelection();
+	    var range = document.createRange();
+	    
+	    range.selectNode(this.element.dom.lastChild.lastChild);
+	    range.setStart(this.element.dom.lastChild.lastChild, 1);
+	    range.setEnd(this.element.dom.lastChild.lastChild, 1);
+	    
+	    this.undelitedLength = this.element.dom.innerHTML.length;
+	    selection.removeAllRanges();
+	    selection.addRange(range);
+	    
+	    return false;
 	},
 	/**
 	 * set all instance variables default values
