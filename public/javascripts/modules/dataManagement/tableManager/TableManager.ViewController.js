@@ -13,7 +13,7 @@ Dbms.DataManagement.TableManager.ViewController = Ext.extend(Dbms.DataManagement
 		this.filters = new Ext.util.MixedCollection;
 		this.headerFilterPlugin = new Ext.ux.grid.GridHeaderFilters({
 		    highlightOnFilter : true,
-			applyMode 	      : 'enter',
+		    applyMode 	      : 'enter',
 		    highlightColor    : '#E2E2E2'
 		});
 		

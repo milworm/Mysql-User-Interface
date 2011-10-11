@@ -253,7 +253,7 @@ Dbms.DataManagement.BaseManager.ViewController.prototype = {
 	createNumberField : function(columnDesc){
 		var realTypes = ['float','double']
 		var numberField = {
-			xtype   	  : "numberfield",
+			xtype         : "field",
 			allowDecimals : realTypes.indexOf(columnDesc['DATA_TYPE']) == -1 ? false : true
 		}
 		

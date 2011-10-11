@@ -1,7 +1,6 @@
 Dbms.SqlWidget.GridPanel = Ext.extend(Ext.grid.EditorGridPanel, {
 	constructor : function(config) {
 		Dbms.SqlWidget.GridPanel.superclass.constructor.call(this, Ext.applyIf({
-			clicksToEdit : 1,
             columns : this.getColumns(config.store)
         }, config));
 	},

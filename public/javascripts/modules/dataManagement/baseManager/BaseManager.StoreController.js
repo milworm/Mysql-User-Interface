@@ -66,11 +66,15 @@ Dbms.DataManagement.BaseManager.StoreController.prototype = {
 			
 			switch(column['DATA_TYPE']){
 				case 'int':
-				case 'float':
 				case 'tinyint':
 				case 'binary':
 				case 'bigint':{
 					field.type = 'int';
+					break;
+				}
+				case 'float':
+				case 'double':{
+					field.type = 'float';
 					break;
 				}
 				case 'date': {

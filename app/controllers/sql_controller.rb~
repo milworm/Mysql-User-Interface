@@ -7,7 +7,7 @@ class SqlController < ApplicationController
       @connection.execute "use `#{request[:database_name]}`"
           
       begin
-        unless (query.gsub(/\n/,' ').strip! =~ /^(select|show|describe|help|call)/i).nil?
+        unless (query.gsub(/\n/,' ').chop! =~ /^(select|show|describe|help|call)/i).nil?
           @result[:rows] = @connection.select_all query.gsub(/\n/,' ').strip!
           @result[:fields] = @result[:rows].first.keys unless @result[:rows].first.nil?
         else

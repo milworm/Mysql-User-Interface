@@ -4,7 +4,7 @@ Dbms.Database.Creator.CharacterSetStore = Ext.extend(Ext.data.JsonStore, {
 			fields   : ['name','collation','description','maxlen'],
 			proxy    : new Ext.data.HttpProxy({
 				url    : Dbms.Actions.database.charlist,
-				method : 'GET'
+				method : 'POST'
 			}),
 			root : 'items'
 		});

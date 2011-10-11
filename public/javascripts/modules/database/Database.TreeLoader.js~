@@ -7,7 +7,7 @@ Dbms.Database.Tree.TreeLoader = Ext.extend(Ext.tree.TreeLoader, {
     constructor : function() {
 		Dbms.Database.Tree.TreeLoader.superclass.constructor.call(this, {
 			url    : Dbms.Actions.database.index,
-			requestMethod : "GET",
+			method : "GET",
 			/**
 			 * @private
 			*/
