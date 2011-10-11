@@ -1,0 +1,18 @@
+body{
+	background-color:black;
+	
+	.container {
+		background-color:black;
+		padding: 20px 0px 0px 0px;
+
+		.header-text {
+			text-align: right;
+		}
+
+		.preview {
+			width: 260px;
+			cursor: pointer;
+			height: 140px;
+		}
+	}
+}

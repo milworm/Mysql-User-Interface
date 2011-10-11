@@ -1,0 +1,12 @@
+// This import applies a global reset to any page that imports this stylesheet.
+@import "blueprint/reset";
+
+// To configure blueprint, edit the partials/base.sass file.
+@import "partials/base";
+@import "partials/main";
+
+// Import all the default blueprint modules so that we can access their mixins.
+@import "blueprint";
+@include blueprint();
+
+.colborderright {padding:10px;border-right:1px solid #ddd;}
