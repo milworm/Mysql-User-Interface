@@ -32,10 +32,11 @@ Dbms.RoutineManagement.BaseManager.View = Ext.extend(Ext.Panel, {
 		this.getBottomToolbar().saveBtn.on('click', this.onSaveButtonClick, this);
 	},
 	updateView : function(store) {
-		var sourceCode = store.getAt(0).get(store.idProperty);
-		var databaseName = store.baseParams.database_name;
-		
-		this.autocomplete = new Dbms.Autocomplete.Controller(this.body.id, databaseName, sourceCode);
+		var sourceCode = store.getAt(0).get(store.idProperty),
+			databaseName = store.baseParams.database_name,
+			dictionary = new Dbms.Autocomplete.KeywordsStore(databaseName);
+
+		this.autocomplete = new Dbms.Autocomplete.Controller(this.body.id, dictionary, sourceCode);
 	},
 	onSaveButtonClick : function() {
 		var sourceCode = this.body.getAttribute('innerText');

@@ -24,7 +24,8 @@ Dbms.SqlWidget.Controller = Ext.extend(function(){}, {
 		Dbms.Core.MessageBus.on('Dbms.SqlWidget.ExecQuery_'+config.uniqueId, this.request, this);
 		
 		this.items.add(config.uniqueId, Dbms.SqlWidget.Factory.factory(config));
-		new Dbms.Autocomplete.Controller(config.uniqueId, config.dbName);
+		var dictionary = new Dbms.Autocomplete.KeywordsStore(config.dbName);
+		new Dbms.Autocomplete.Controller(config.uniqueId, dictionary);
 	},
 	request : function(config) {
 		var query = config.query;

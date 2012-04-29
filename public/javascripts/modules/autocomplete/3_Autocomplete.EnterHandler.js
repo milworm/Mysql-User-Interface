@@ -13,14 +13,10 @@ Dbms.Autocomplete.EnterHandler = Ext.extend(Dbms.Autocomplete.KeyHandler, {
 			focusOffset : this.sel.focusOffset
 		});
 		
-		if(this.controller.suggestionBox.isVisible()){
-			if(this.controller.selectedIndex >= 0){
-				this.controller.appendSelected(false, this.focusNode);
-				this.controller.highlighter.highlightElement();
-				return false;
-			} else {
-				this.controller.hideSuggestionBox();
-			}
+		if(this.controller.appendSelected(false, this.focusNode)) {
+			return false;
+		} else {
+			this.controller.hideSuggestionBox();
 		}
 		
 		return true;
