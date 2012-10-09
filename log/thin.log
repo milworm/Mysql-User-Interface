@@ -1,0 +1,24 @@
+>> Writing PID to tmp/pids/thin.pid
+>> Using rack adapter
+>> Thin web server (v1.2.11 codename Bat-Shit Crazy)
+>> Maximum connections set to 1024
+>> Listening on 0.0.0.0:3000, CTRL+C to stop
+ERROR 1046 (3D000) at line 22: No database selected
+{:success=>false, :msg=>"Error occured while importing sql-statements"}
+ERROR 1046 (3D000) at line 22: No database selected
+{:success=>false, :msg=>"Error occured while importing sql-statements"}
+{:success=>true}
+>> Stopping ...
+>> Exiting!
+>> Writing PID to tmp/pids/thin.pid
+>> Using rack adapter
+>> Thin web server (v1.2.11 codename Bat-Shit Crazy)
+>> Maximum connections set to 1024
+>> Listening on 0.0.0.0:3000, CTRL+C to stop
+>> Writing PID to tmp/pids/thin.pid
+>> Using rack adapter
+>> Thin web server (v1.2.11 codename Bat-Shit Crazy)
+>> Maximum connections set to 1024
+>> Listening on 0.0.0.0:3000, CTRL+C to stop
+>> Stopping ...
+>> Exiting!
