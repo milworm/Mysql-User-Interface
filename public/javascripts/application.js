@@ -1,3 +1,5 @@
+Ext.BLANK_IMAGE_URL = "/ext-3.4.0/resources/images/default/s.gif";
+Ext.chart.Chart.CHART_URL = "/ext-3.4.0/resources/charts.swf";
 // overrides go here
 Ext.decode = function(json, safe) {
 	if(safe) {
