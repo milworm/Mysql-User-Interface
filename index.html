@@ -1,74 +1,74 @@
 <html>
 	<head>
 		<title>Mysql User Interface</title>
-		 <link href="mysqlui-page/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" />
-  		<link href="mysqlui-page/stylesheets/print.css" media="print" rel="stylesheet" type="text/css" />
-  		<!--[if lt IE 8]>
-      		<link href="mysqlui-page/stylesheets/ie.css" media="screen, projection" rel="stylesheet" type="text/css" />
-  		<![endif]-->
-  		<script type="text/javascript" src="http://code.jquery.com/jquery-1.6.4.min.js"></script>
-  		<script src="mysqlui-page/js/galleria/galleria-1.2.5.min.js"></script>
-  		<script src="mysqlui-page/js/galleria/themes/classic/galleria.classic.min.js"></script>
-  		<script type="text/javascript">
-  			$(function(){
-  				$('.preview-list').galleria({
-        			width:960,
-        			height:300
-    			});
-  			});
-  		</script>
+		<link rel="stylesheet" type="text/css" href="mysqlui-page/js/libs/bootstrap/css/bootstrap.css" />
+		<style type="text/css">
+			.header {
+				border-bottom: 1px solid #e5e5e5;
+				margin:0 10px;
+				height: 300px;
+			}
+
+			.root {
+				margin-top: 20px;
+			}
+
+			body {
+				background: ghostWhite;
+			}
+		</style>
 	</head>
 	<body>
-		<div class="container">
-			<h1 class="header-text">Mysql User Interface</h1>
+		<div class="header">
+			<div class="container">
+				<h1>MySQL User Interface</h1>
 
-			<div class="preview-list span-24 last">
-				<img class="preview" src="./mysqlui-page/images/screen1.png" />
-				<img class="preview" src="./mysqlui-page/images/screen2.png" />
-				<img class="preview" src="./mysqlui-page/images/screen3.png" />
-				<img class="preview" src="./mysqlui-page/images/screen4.png" />
-				<img class="preview" src="./mysqlui-page/images/screen5.png" />
+				<p class="help-inline help-block">
+					<h4>Ruby on Rails 3</h4>
+					<h4>ExtJS 3.4</h4>
+					<h4>MySQL 5</h4>
+				</p>
 			</div>
+		</div>
 
-			
-			<h2>Introduction</h2>
-			<p>
-				Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-				consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-				cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-				proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-			</p>
+		<div class="container root">
+			<h2>Features: </h2>
+			<ul class="thumbnails">
+			 	<li class="span4">
+			    	<a href="http://milworm.github.com/MysqlUI/mysqlui-page/images/screen1.png" class="thumbnail">
+			      		<img src="http://dummyimage.com/400x300/292929/e3e3e3&text=Typeahead" alt="">
+			    	</a>
+			  	</li>
 
-			<h2>Features</h2>
-			<ul>
-				<li>Sql autocomplete</li>
-				<li>There is an interface for creation stored routines</li>
-				<li>Sql autocomplete</li>
-				<li>Sql autocomplete</li>
-				<li>Sql autocomplete</li>
-				<li>Sql autocomplete</li>
-			</ul>
+			  	<li class="span4">
+			    	<a href="http://milworm.github.com/MysqlUI/mysqlui-page/images/screen2.png" class="thumbnail">
+			      		<img src="http://dummyimage.com/400x300/292929/e3e3e3&text=Filtering" alt="">
+			    	</a>
+			  	</li>
 
-			<h2>Plan</h2>
-			<ul>
-				<li>Sql autocomplete</li>
-				<li>There is an interface for creation stored routines</li>
-				<li>Sql autocomplete</li>
-				<li>Sql autocomplete</li>
-				<li>Sql autocomplete</li>
-				<li>Sql autocomplete</li>
-			</ul>
+			  	<li class="span4">
+			    	<a href="http://milworm.github.com/MysqlUI/mysqlui-page/images/screen3.png" class="thumbnail">
+			      		<img src="http://dummyimage.com/400x300/292929/e3e3e3&text=MySQL Help" alt="">
+			    	</a>
+			  	</li>
 
-			<h2>How to install</h2>
-			<ul>
-				<li>Sql autocomplete</li>
-				<li>There is an interface for creation stored routines</li>
-				<li>Sql autocomplete</li>
-				<li>Sql autocomplete</li>
-				<li>Sql autocomplete</li>
-				<li>Sql autocomplete</li>
+			  	<li class="span4">
+			    	<a href="http://milworm.github.com/MysqlUI/mysqlui-page/images/screen4.png" class="thumbnail">
+			      		<img src="http://dummyimage.com/400x300/292929/e3e3e3&text=Importing SQL" alt="">
+			    	</a>
+			  	</li>
+
+			  	<li class="span4">
+			    	<a href="http://milworm.github.com/MysqlUI/mysqlui-page/images/screen1.png" class="thumbnail">
+			      		<img src="http://dummyimage.com/400x300/292929/e3e3e3&text=Autocomplete" alt="">
+			    	</a>
+			  	</li>
+
+			  	<li class="span4">
+			    	<a href="http://milworm.github.com/MysqlUI/mysqlui-page/images/screen1.png" class="thumbnail">
+			      		<img src="http://dummyimage.com/400x300/292929/e3e3e3&text=Autocomplete" alt="">
+			    	</a>
+			  	</li>
 			</ul>
 		</div>
 	</body>
