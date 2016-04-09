@@ -1,12 +1,12 @@
 source 'http://rubygems.org'
 
-gem 'rails', '3.0.3'
+gem 'rails', '4.2.6'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
 gem 'mysql2'
-gem 'composite_primary_keys', '=3.1.0'
+gem 'composite_primary_keys'
 #gem 'thin'
 #gem 'em-websocket'
 #gem 'mongrel';

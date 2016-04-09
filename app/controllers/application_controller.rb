@@ -6,6 +6,7 @@ class ApplicationController < ActionController::Base
     
     def initialize
         super
+        @js_files = Dir["public/javascripts/modules/**/*.js"].sort.inject [] {|a,i| a.push i.split('/javascripts/')[1]}
         @result = {success: true}
     end
     

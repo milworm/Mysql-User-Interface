@@ -825,10 +825,10 @@ Dbms.Database.Tree.TreePanel = Ext.extend(Ext.tree.TreePanel,{
 			ctxMenu = this.menus[node.attributes.desc.type];
 		}
 		
-		e.target.contextMenu = ctxMenu;
+		e.target.extContextMenu = ctxMenu;
 		this.selectedNode = node;
-		e.target.contextMenu.showAt(e.xy);
-		this.selectedNode.contextMenu = ctxMenu;
+		e.target.extContextMenu.showAt(e.xy);
+		this.selectedNode.extContextMenu = ctxMenu;
     },
     /**
      * delete database or table with node

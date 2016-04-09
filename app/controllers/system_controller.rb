@@ -65,7 +65,7 @@ class SystemController < ApplicationController
     end
     
     def variables
-        @result['rows'] = Variable.find :all
+        @result['rows'] = Variable.all
         render json: @result
     end
     

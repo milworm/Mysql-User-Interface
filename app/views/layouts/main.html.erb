@@ -3,14 +3,14 @@
 		<title>
 			<%= @title%>
 		</title>
-		<%= stylesheet_link_tag "/ext-3.4.0/resources/css/ext-all", "main" %>
-		<%= javascript_include_tag '/ext-3.4.0/adapter/ext/ext-base-debug',
-								   '/ext-3.4.0/ext-all-debug',
-								   '/ext-3.4.0/ux/RowExpander'
-#"/ext-3.4.0/resources/css/xtheme-gray"
-								  %>
+		<%= stylesheet_link_tag '/ext-3.4.0/resources/css/ext-all', '/ext-3.4.0/resources/css/xtheme-gray', 'main' %>
+		<%= javascript_include_tag '/ext-3.4.0/adapter/ext/ext-base-debug', 
+									'/ext-3.4.0/ext-all-debug', 
+									'/ext-3.4.0/ux/RowExpander' %>
 		<%= javascript_include_tag 'config','links'%>
-		<%= javascript_include_tag Dir["public/javascripts/modules/**/*.js"].sort.inject [] {|a,i| a.push i.split('/javascripts/')[1]} %>
+		<% @js_files.each do |file| %>
+			<%= javascript_include_tag file %>
+		<% end %>
 		<%= javascript_include_tag 'application'%>
 	</head>
 	<body>

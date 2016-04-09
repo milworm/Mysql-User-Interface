@@ -1,6 +1,6 @@
 class Schemata < ActiveRecord::Base
-    set_table_name :SCHEMATA
-    set_primary_key :SCHEMA_NAME
+    self.table_name = :SCHEMATA
+    self.primary_key = :SCHEMA_NAME
     
     scope :routines, lambda {joins('left join ROUTINES on SCHEMATA.SCHEMA_NAME = ROUTINES.ROUTINE_SCHEMA')}
     scope :tables,   lambda {joins('left join TABLES on SCHEMATA.SCHEMA_NAME = TABLES.TABLE_SCHEMA')}

@@ -18,6 +18,7 @@ RorAdminSite::Application.routes.draw do
   get "procedure/modify"
 
   get "sql/execute"
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
@@ -73,8 +74,8 @@ RorAdminSite::Application.routes.draw do
   # This is a legacy wild controller route that's not recommended for RESTful applications.
   # Note: This route will make all actions in every controller accessible via GET requests.
   # match ':controller(/:action(/:id(.:format)))'
-  match 'autocomplete/full/:database_name' => 'autocomplete#full_structure'
-  match 'sql/execute/:database_name' => 'sql#execute'
-  match 'procedure/content(/:database_name(/:procedure_name))' => 'procedure#content'
-  match ':controller(/:action)'
+  match 'autocomplete/full/:database_name' => 'autocomplete#full_structure', :via => [:post]
+  match 'sql/execute/:database_name' => 'sql#execute', :via => [:post]
+  match 'procedure/content(/:database_name(/:procedure_name))' => 'procedure#content', :via => [:get]
+  match ':controller(/:action)', :via => [:get, :post]
 end
